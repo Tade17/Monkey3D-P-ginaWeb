@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/img/logo.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body class="font-roboto">
@@ -61,9 +62,10 @@
                 </button>
                 <div id="userDropdown"
                     class="absolute right-0 z-10 mt-2 w-48 bg-white rounded-md shadow-lg hidden transition-all duration-200 origin-top-right">
-                    <a href="/login" class="block px-4 py-2 text-sm font-bold text-black hover:bg-blue-600">Iniciar
+                    <a href="/templates/login.html"
+                        class="block px-4 py-2 text-sm font-bold text-black hover:bg-blue-600">Iniciar
                         Sesión</a>
-                    <a href="/register"
+                    <a href="/templates/register.html"
                         class="block px-4 py-2 text-sm font-bold text-black hover:bg-blue-600">Registrarse</a>
                 </div>
             </div>
@@ -143,39 +145,265 @@
             </div>
         </div>
     </header>
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-8">
+            <h1 class="text-3xl font-bold mb-4">Catálogo de Productos</h1>
 
-    <main class="container mx-auto py-8">
-        <section
-            class="max-w-md mx-auto bg-white rounded-lg shadow-md p-8 mt-8 hover:shadow-xl hover:shadow-blue-500 transition-all duration-300">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Iniciar Sesión</h2>
-            <form action="/templates/index.html">
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-700 font-bold mb-2">Correo Electrónico</label>
-                    <input type="email" id="email" name="email"
-                        class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
-                        required>
+            <div class="mb-4">
+                <label for="categoria" class="block text-gray-700 font-bold mb-2">Filtrar por categoría:</label>
+                <select id="categoria"
+                    class="border border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:ring focus:ring-blue-300">
+                    <option value="todos">Todos</option>
+                    <option value="llaveros">Llaveros</option>
+                    <option value="leds">Led Luminosos</option>
+                    <option value="soportes">Soportes</option>
+                    <option value="soportes">Accesorios</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="productos">
+            <h2 class="text-2xl font-bold mb-4">Ofertas</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 productos-contenedor"
+                id="ofertas-container">
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-red-400 transition-all duration-300"
+                    data-categoria="leds">
+                    <div class="relative">
+                        <img src="/static/img/led-yeah.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm">
+                            Oferta
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Led lumninoso (YEAH)</h3>
+                        <p class="text-gray-700">$14.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
                 </div>
-                <div class="mb-6">
-                    <label for="password" class="block text-gray-700 font-bold mb-2">Contraseña</label>
-                    <input type="password" id="password" name="password"
-                        class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
-                        required>
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-red-400 transition-all duration-300"
+                    data-categoria="leds">
+                    <div class="relative">
+                        <img src="/static/img/led-brutal.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm">
+                            Oferta
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Led luminoso(BRUTAL)</h3>
+                        <p class="text-gray-700">$14.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
                 </div>
-                <div class="flex items-center justify-between">
-                    <button type="submit"
-                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-300">
-                        Iniciar Sesión
-                    </button>
-                    <a href="/" class="text-blue-500 hover:text-blue-700 text-sm">¿Olvidaste tu contraseña?</a>
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-red-400 transition-all duration-300"
+                    data-categoria="leds">
+                    <div class="relative">
+                        <img src="/static/img/led-boom.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm">
+                            Oferta
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Led luminoso(BOOM)</h3>
+                        <p class="text-gray-700">$14.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
                 </div>
-                <div class="mt-4 text-center">
-                    <p>¿No tienes una cuenta? <a href="/templates/register.html"
-                            class="text-blue-500 hover:text-blue-700">Regístrate</a></p>
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-red-400 transition-all duration-300"
+                    data-categoria="leds">
+                    <div class="relative">
+                        <img src="/static/img/led-ana.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm">
+                            Oferta
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Led luminoso(ANA)</h3>
+                        <p class="text-gray-700">$14.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
                 </div>
-            </form>
+            </div>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Nuevos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 productos-contenedor"
+                id="nuevos-container">
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-blue-400 transition-all duration-300"
+                    data-categoria="soportes">
+                    <div class="relative">
+                        <img src="/static/img/soporte-switch.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Nuevo
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Soporte switch</h3>
+                        <p class="text-gray-700">$25.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
+                </div>
+                <div class="pr  oducto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-blue-400 transition-all duration-300"
+                    data-categoria="soportes">
+                    <div class="relative">
+                        <img src="/static/img/soporteMando2.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Nuevo
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Soporte mando ps5</h3>
+                        <p class="text-gray-700">$14.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
+                </div>
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-blue-400 transition-all duration-300"
+                    data-categoria="llaveros">
+                    <div class="relative">
+                        <img src="/static/img/llavero-pokemon.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Nuevo
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Llavero personalizables</h3>
+                        <p class="text-gray-700">$14.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
+                </div>
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-blue-400 transition-all duration-300"
+                    data-categoria="llaveros">
+                    <div class="relative">
+                        <img src="/static/img/llavero-spiderman.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Nuevo
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Llaveros personalizables</h3>
+                        <p class="text-gray-700">$14.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Destacados</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 productos-contenedor"
+                id="destacados-container">
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-green-400 transition-all duration-300"
+                    data-categoria="accesorios">
+                    <div class="relative">
+                        <img src="/static/img/mascara-casa-papel.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                            Destacado
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Máscara Papel's house</h3>
+                        <p class="text-gray-700">$34.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
+                </div>
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-green-400 transition-all duration-300"
+                    data-categoria="accesorios">
+                    <div class="relative">
+                        <img src="/static/img/casa-papel-circulo.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                            Destacado
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Circle Papel's house</h3>
+                        <p class="text-gray-700">$34.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
+                </div>
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-green-400 transition-all duration-300"
+                    data-categoria="accesorios">
+                    <div class="relative">
+                        <img src="/static/img/casa-papel-estrella.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                            Destacado
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Star Papel's house</h3>
+                        <p class="text-gray-700">$34.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
+                </div>
+                <div class="producto nuevo border rounded-lg shadow-md overflow-hidden group hover:shadow-xl hover:shadow-green-400 transition-all duration-300"
+                    data-categoria="accesorios">
+                    <div class="relative">
+                        <img src="/static/img/casa-papel-paraguas.jpg" alt="Nuevo Producto 1"
+                            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                            Destacado
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Umbrella Papel's house</h3>
+                        <p class="text-gray-700">$34.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Ver
+                            detalles
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Añadir
+                            al carrito</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <br><br><br><br><br><br>
+
 
 
     <!-- footer para todos los templates -->
@@ -327,8 +555,8 @@
     </footer>
 
 </body>
+
 <script src="/static/js/miJS.js"></script>
 <script src="/static/js/login.js"></script>
-<script src="/static/js/validation.js"></script>
 
 </html>
