@@ -21,3 +21,26 @@ function incrementCart() {
     cartCount++;
     cartCountElement.textContent = cartCount;
 }
+
+
+// para el carrusel del index pa 
+const carousel = document.getElementById('carousel');
+const images = carousel.querySelectorAll('img');
+let currentImageIndex = 0;
+
+function showImage(index) {
+    images.forEach((image, i) => {
+        if (i === index) {
+            image.classList.remove('opacity-0');
+        } else {
+            image.classList.add('opacity-0');
+        }
+    });
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    showImage(currentImageIndex);
+}
+
+setInterval(nextImage, 3000);
