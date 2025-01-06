@@ -170,15 +170,15 @@ function crearProducto(producto) {
     p.textContent = `$${producto.precio}`;
 
     const botonesDiv = document.createElement('div'); // Contenedor para los botones
-    botonesDiv.classList.add('flex', 'flex-col','gap-2')
+    botonesDiv.classList.add('flex', 'flex-col', 'gap-2')
 
     const verDetallesBtn = document.createElement('button');
     verDetallesBtn.textContent = "Ver detalles";
-    verDetallesBtn.classList.add('bg-blue-500', 'hover:bg-blue-700', 'text-white', 'font-bold', 'py-2', 'px-4', 'rounded', 'mt-2','w-full');
+    verDetallesBtn.classList.add('bg-blue-500', 'hover:bg-blue-700', 'text-white', 'font-bold', 'py-2', 'px-4', 'rounded', 'mt-2', 'w-full');
 
     const anadirCarritoBtn = document.createElement('button');
     anadirCarritoBtn.textContent = "Añadir al carrito";
-    anadirCarritoBtn.classList.add('bg-blue-500', 'hover:bg-blue-700', 'text-white', 'font-bold', 'py-2', 'px-4', 'rounded', 'mt-2','w-full');
+    anadirCarritoBtn.classList.add('bg-blue-500', 'hover:bg-blue-700', 'text-white', 'font-bold', 'py-2', 'px-4', 'rounded', 'mt-2', 'w-full');
 
     relativeDiv.appendChild(img);
     relativeDiv.appendChild(tipoDiv);
@@ -203,6 +203,7 @@ function mostrarProductos(categoria = 'todos') {
 
 mostrarProductos(); // Muestra todos los productos al cargar la página
 
-filtroCategoria.addEventListener('change', function() {
+filtroCategoria.addEventListener('change', function () {
     mostrarProductos(this.value);
 });
+
