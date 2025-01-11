@@ -1,0 +1,40 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Crear Producto{% endblock %}
+
+{% block content %}
+    <h1 class="text-2xl font-bold mb-4">Agregar Producto</h1>
+
+    <form method="POST" action="/productos/crear" enctype="multipart/form-data"> {# Importante: enctype para la imagen #}
+        <div class="mb-4">
+            <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="descripcion" class="block text-gray-700 text-sm font-bold mb-2">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="precio" class="block text-gray-700 text-sm font-bold mb-2">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="stock" class="block text-gray-700 text-sm font-bold mb-2">Stock:</label>
+            <input type="number" id="stock" name="stock" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="imagen" class="block text-gray-700 text-sm font-bold mb-2">Imagen:</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="idCategoria" class="block text-gray-700 text-sm font-bold mb-2">Categoría:</label>
+            <select id="idCategoria" name="idCategoria" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                {% for categoria in categorias %}
+                <option value="{{ categoria.id }}">{{ categoria.nombre }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Guardar</button>
+        <a href="/productos" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2">Cancelar</a>
+    </form>
+{% endblock %}

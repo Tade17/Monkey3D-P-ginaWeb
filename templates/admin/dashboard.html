@@ -1,0 +1,47 @@
+{% extends 'admin/base.html' %} {# Indica que hereda de base.html #}
+
+{% block title %}Dashboard{% endblock %} {# Define el título de la página #}
+
+{% block content %} {# Define el contenido específico del dashboard #}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <h3 class="text-lg font-semibold">Ingresos Generados</h3>
+            <p class="text-2xl font-bold text-green-500">$25,000</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <h3 class="text-lg font-semibold">Ventas Realizadas</h3>
+            <p class="text-2xl font-bold text-blue-500">320</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <h3 class="text-lg font-semibold">Usuarios Registrados</h3>
+            <p class="text-2xl font-bold text-purple-500">1,200</p>
+        </div>
+    </div>
+
+    <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-bold mb-4">Lista de Pedidos</h2>
+        <table class="table-auto w-full border-collapse border border-gray-200">
+            <thead>
+                <tr class="bg-gray-100">
+                    <th class="border border-gray-300 px-4 py-2 text-left">ID</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Cliente</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Total</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Estado</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">001</td>
+                    <td class="border border-gray-300 px-4 py-2">Juan Perez</td>
+                    <td class="border border-gray-300 px-4 py-2">$500</td>
+                    <td class="border border-gray-300 px-4 py-2">Completado</td>
+                    <td class="border border-gray-300 px-4 py-2">
+                        <button class="bg-blue-500 text-white px-3 py-1 rounded">Editar</button>
+                        <button class="bg-red-500 text-white px-3 py-1 rounded">Eliminar</button>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+{% endblock %}

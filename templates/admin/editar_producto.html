@@ -1,0 +1,50 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Editar Producto{% endblock %}
+
+{% block content %}
+    <h1 class="text-2xl font-bold mb-4">Editar Producto</h1>
+
+    <form method="POST" action="/productos/editar/{{ producto.id }}" enctype="multipart/form-data">
+        <div class="mb-4">
+            <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="{{ producto.nombre }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="descripcion" class="block text-gray-700 text-sm font-bold mb-2">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">{{ producto.descripcion }}</textarea> {# Corregido: se usa textarea #}
+        </div>
+        <div class="mb-4">
+            <label for="precio" class="block text-gray-700 text-sm font-bold mb-2">Precio:</label>
+            <input type="number" id="precio" name="precio" value="{{ producto.precio }}" step="0.01" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="stock" class="block text-gray-700 text-sm font-bold mb-2">Stock:</label>
+            <input type="number" id="stock" name="stock" value="{{ producto.stock }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+                <div class="mb-4">
+                    <label for="imagen" class="block text-gray-700 text-sm font-bold mb-2">Imagen:</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    {% if producto.imagen %}
+                        <img src="/static/uploads/{{ producto.imagen }}" alt="Imagen actual" class="mt-2 w-24 h-24 object-cover">
+                    {% endif %}
+                </div>
+        <div class="mb-4">
+            <label for="idCategoria" class="block text-gray-700 text-sm font-bold mb-2">Categoría:</label>
+            <select id="idCategoria" name="idCategoria" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                {% for categoria in categorias %}
+                <option value="{{ categoria.id }}" {% if producto.idCategoria == categoria.id %}selected{% endif %}>{{ categoria.nombre }}</option> {# Selecciona la categoría actual #}
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-4">
+          <label for="estado" class="block text-gray-700 text-sm font-bold mb-2">Estado:</label>
+          <select id="estado" name="estado" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <option value="activo" {% if producto.estado == 'activo' %}selected{% endif %}>Activo</option>
+            <option value="inactivo" {% if producto.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
+          </select>
+        </div>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Guardar Cambios</button>
+        <a href="/templates/admin/productos.html" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2">Cancelar</a>
+    </form>
+{% endblock %}

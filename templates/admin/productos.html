@@ -1,0 +1,55 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Productos{% endblock %}
+
+{% block content %}
+    <h1 class="text-2xl font-bold mb-4">Lista de Productos</h1>
+    <a href="/productos/crear" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Crear Producto</a>
+
+    <div class="bg-white shadow-md rounded-lg p-6">
+        <table class="table-auto w-full border-collapse border border-gray-200">
+            <thead>
+                <tr class="bg-gray-100">
+                    <th class="border border-gray-300 px-4 py-2 text-left">ID</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Nombre</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Descripción</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Precio</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Stock</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Imagen</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Fecha de Registro</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Estado</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Categoría</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in productos %}
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto.id }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto.nombre }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto.descripcion }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto.precio }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto.stock }}</td>
+                    <td class="border border-gray-300 px-4 py-2">
+                        {% if producto.imagen %}
+                            <img src="/static/uploads/{{ producto.imagen }}" alt="{{ producto.nombre }}" class="w-16 h-16 object-cover">
+                        {% else %}
+                            Sin imagen
+                        {% endif %}
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto.fecha_registro }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto.estado }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto.idCategoria }}</td>
+                    <td class="border border-gray-300 px-4 py-2 flex space-x-2">
+                        <a href="/productos/editar/{{ producto.id }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">Editar</a>
+                        <a href="/productos/eliminar/{{ producto.id }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                {% if not productos %}
+                    <tr><td colspan="10" class="border border-gray-300 px-4 py-2 text-center">No hay productos registrados.</td></tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
