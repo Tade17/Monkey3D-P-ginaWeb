@@ -1,0 +1,45 @@
+2025-01-11 03:24:45,261 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-11 03:24:45,261 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-11 03:24:45,263 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 03:24:45,497 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 03:24:45,500 - werkzeug - INFO -  * Debugger PIN: 484-010-584
+2025-01-11 03:24:52,103 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:24:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-11 03:24:52,181 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:24:52] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-11 03:24:52,182 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:24:52] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-11 03:24:52,203 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:24:52] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=KNnfOfp0b22wn24Cr6ok HTTP/1.1" 200 -
+2025-01-11 03:24:52,383 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:24:52] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-11 03:24:56,204 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:24:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-11 03:24:56,217 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:24:56] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-11 03:24:56,222 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:24:56] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-11 03:24:56,253 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:24:56] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=KNnfOfp0b22wn24Cr6ok HTTP/1.1[0m" 304 -
+2025-01-11 03:25:01,753 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:25:01] "GET /test-error HTTP/1.1" 200 -
+2025-01-11 03:25:01,860 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 03:25:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-11 13:43:03,408 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-11 13:43:03,408 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-11 13:43:03,410 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 13:43:03,666 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 13:43:03,668 - werkzeug - INFO -  * Debugger PIN: 484-010-584
+2025-01-11 13:43:11,313 - main - ERROR - Error en la ruta '/': (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión)")
+2025-01-11 13:43:11,317 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 13:43:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-11 13:43:11,564 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 13:43:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-11 13:43:29,435 - main - ERROR - Error en la ruta '/': (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión)")
+2025-01-11 13:43:29,436 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 13:43:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-11 13:43:40,882 - main - ERROR - Error en la ruta '/': (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión)")
+2025-01-11 13:43:40,883 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 13:43:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-11 13:43:41,145 - main - ERROR - Error en la ruta '/': (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión)")
+2025-01-11 13:43:41,146 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 13:43:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-11 13:45:23,624 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-11 13:45:23,624 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-11 13:45:23,625 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 13:45:23,887 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 13:45:23,890 - werkzeug - INFO -  * Debugger PIN: 484-010-584
+2025-01-11 13:45:25,724 - py_monkey3d - INFO - 0 productos destacados obtenidos.
+2025-01-11 13:45:25,730 - py_monkey3d - INFO - 0 categorías obtenidas.
+2025-01-11 13:45:25,765 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 13:45:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-11 13:45:25,863 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 13:45:25] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-11 13:45:25,864 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 13:45:25] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-11 13:45:25,954 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 13:45:25] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=0BeOPyYF1li7Vw2lR6KU HTTP/1.1" 200 -
+2025-01-11 13:45:26,108 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 13:45:26] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -

@@ -1,9 +1,20 @@
+CREATE TABLE pais(
+    id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL UNIQUE,
+    codigo_iso VARCHAR(4),
+    disponible TINYINT(1) DEFAULT 1,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
 CREATE TABLE departamento (
     id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL UNIQUE,
     codigo_postal VARCHAR(10),
     disponible TINYINT(1) DEFAULT 1,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    pais_id INT(10) UNSIGNED NOT null,
+    FOREIGN KEY( pais_id) REFERENCES pais(id)
 );
 
 CREATE TABLE provincia(
@@ -160,35 +171,40 @@ CREATE TABLE notificaciones (
     FOREIGN KEY (pedido_id) REFERENCES pedido(id)
 );
 
+
+INSERT INTO PAIS (codigo_iso, nombre) VALUES
+('PER', 'Perú'),
+('COL', 'Colombia'),
+('ARG','Argentina');
 -- inserts departamento 
 INSERT INTO
-    departamento (nombre, codigo_postal)
+    departamento (nombre, codigo_postal,pais_id)
 VALUES
-    ('Amazonas', '01'),
-    ('Áncash', '02'),
-    ('Apurímac', '03'),
-    ('Arequipa', '04'),
-    ('Ayacucho', '05'),
-    ('Cajamarca', '06'),
-    ('Callao', '07'),   
-    ('Cusco', '08'),
-    ('Huancavelica', '09'),
-    ('Huánuco', '10'),
-    ('Ica', '11'),
-    ('Junín', '12'),
-    ('La Libertad', '13'),
-    ('Lambayeque', '14'),
-    ('Lima', '15'),
-    ('Loreto', '16'),
-    ('Madre de Dios', '17'),
-    ('Moquegua', '18'),
-    ('Pasco', '19'),
-    ('Piura', '20'),
-    ('Puno', '21'),
-    ('San Martín', '22'),
-    ('Tacna', '23'),
-    ('Tumbes', '24'),
-    ('Ucayali', '25');
+    ('Amazonas', '01',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Áncash', '02',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Apurímac', '03',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Arequipa', '04',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Ayacucho', '05',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Cajamarca', '06',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Callao', '07',(SELECT id FROM pais WHERE nombre = 'Perú')),   
+    ('Cusco', '08',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Huancavelica', '09',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Huánuco', '10',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Ica', '11',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Junín', '12',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('La Libertad', '13',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Lambayeque', '14',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Lima', '15',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Loreto', '16',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Madre de Dios', '17',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Moquegua', '18',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Pasco', '19',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Piura', '20',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Puno', '21',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('San Martín', '22',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Tacna', '23',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Tumbes', '24',(SELECT id FROM pais WHERE nombre = 'Perú')),
+    ('Ucayali', '25',(SELECT id FROM pais WHERE nombre = 'Perú'));
 
 -- inserts provincia
 INSERT INTO provincia (nombre, departamento_id, codigo_postal) VALUES

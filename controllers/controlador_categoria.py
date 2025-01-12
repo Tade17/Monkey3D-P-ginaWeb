@@ -4,14 +4,7 @@ from logger_config import logger
 import mysql.connector  # Importar el conector específico
 
 def insertar_categoria(nombre):
-    """Inserta una nueva categoría en la base de datos.
 
-    Args:
-        nombre: El nombre de la categoría.
-
-    Returns:
-        True si la inserción fue exitosa, False en caso contrario.
-    """
     if not nombre or not nombre.strip():
         logger.warning("El nombre de la categoría está vacío o es inválido.")
         return False
@@ -32,11 +25,6 @@ def insertar_categoria(nombre):
             conexion.close()
 
 def obtener_todas_categorias():
-    """Obtiene todas las categorías de la base de datos.
-
-    Returns:
-        Una lista de tuplas con las categorías o una lista vacía si no hay categorías.
-    """
     conexion = obtener_conexion()
     categorias = []
     try:
@@ -54,14 +42,7 @@ def obtener_todas_categorias():
             conexion.close()
 
 def obtener_categoria_por_id(id):
-    """Obtiene una categoría por su ID.
 
-    Args:
-        id: El ID de la categoría.
-
-    Returns:
-        Un objeto claseCategoría o None si no se encuentra la categoría.
-    """
     conexion = obtener_conexion()
     categoria = None
     try:
@@ -102,14 +83,6 @@ def actualizar_categoria(id, nombre):
             conexion.close()
 
 def eliminar_categoria(id):
-    """Elimina una categoría de la base de datos, verificando que no tenga productos asociados.
-
-    Args:
-        id: El ID de la categoría a eliminar.
-
-    Returns:
-        True si la eliminación fue exitosa, False en caso contrario.
-    """
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:

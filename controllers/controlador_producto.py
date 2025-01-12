@@ -49,6 +49,34 @@ def obtener_todos_productos():
         if conexion:
             conexion.close()
 
+
+            
+ESTADO_DESTACADOS = 'destacados'
+
+def obtener_productos_destacados():
+    conexion = obtener_conexion()
+    productos = []
+    try:
+        with conexion.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT id, nombre, descripcion, precio, stock, imagen, fecha_registro, estado, categoria_id
+                FROM producto 
+                WHERE estado = %s
+                """, (ESTADO_DESTACADOS,)
+            )
+            resultados = cursor.fetchall()
+            for resultado in resultados:
+                producto = claseProducto(*resultado)
+                productos.append(producto)
+        logger.info(f"{len(productos)} productos destacados obtenidos.")
+    except mysql.connector.Error as e:
+        logger.error(f"Error al obtener productos destacados: {e}")
+    finally:
+        if conexion:
+            conexion.close()
+    return productos            
+
 def obtener_producto_por_id(id):
     conexion = obtener_conexion()
     producto = None
