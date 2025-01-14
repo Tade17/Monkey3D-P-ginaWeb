@@ -1,67 +1,65 @@
 from bd import obtener_conexion
-from clases import claseDepartamento
+from clases import Departamento
 from logger_config import logger
 import mysql.connector
 
 def insertar_departamento(departamento):
-    if not departamento.nombre or not departamento.nombre.strip():
-        logger.warning("El nombre del departamento está vacío o es inválido.")
-        return False
     if not departamento.codigo_postal or not str(departamento.codigo_postal).isdigit():
         logger.warning("El código postal está vacío o es inválido.")
-        return False
+        return None
 
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
-            sql = "INSERT INTO departamento (nombre, codigo_postal) VALUES (%s, %s)"
-            cursor.execute(sql, (departamento.nombre, departamento.codigo_postal))
-        conexion.commit()
-        departamento.id = cursor.lastrowid 
-        logger.info(f"Departamento '{departamento.nombre}' insertado exitosamente con ID: {departamento.id}")
-        return True
+            sql = "INSERT INTO departamento (nombre, codigo_postal, disponible) VALUES (%s, %s, %s)" #Agrego el campo disponible
+            cursor.execute(sql, (departamento.nombre, departamento.codigo_postal, departamento.disponible)) #agrego el campo disponible
+            conexion.commit()
+            departamento_id = cursor.lastrowid
+            cursor.execute("SELECT id, nombre, codigo_postal, disponible, fecha_creacion FROM departamento WHERE id = %s", (departamento_id,))
+            result = cursor.fetchone()
+            if result:
+                return Departamento(*result)
+            else:
+                return None
     except mysql.connector.Error as e:
         logger.error(f"Error al insertar el departamento '{departamento.nombre}': {e}")
-        conexion.rollback()
-        return False
+        if conexion:
+            conexion.rollback()
+        return None
     finally:
         if conexion:
             conexion.close()
 
 def obtener_todos_departamentos():
     conexion = obtener_conexion()
-    departamentos = []
     try:
         with conexion.cursor() as cursor:
             sql = "SELECT id, nombre, codigo_postal, disponible, fecha_creacion FROM departamento"
             cursor.execute(sql)
-            resultados = cursor.fetchall()
-            for resultado in resultados:
-                departamento = claseDepartamento(*resultado)
-                departamentos.append(departamento)
+            departamentos = [Departamento(*row) for row in cursor.fetchall()]
         logger.info(f"{len(departamentos)} departamentos obtenidos.")
         return departamentos
     except mysql.connector.Error as e:
         logger.error(f"Error al obtener departamentos: {e}")
-        return []
+        return None
     finally:
         if conexion:
             conexion.close()
 
 def obtener_departamento_por_id(id):
     conexion = obtener_conexion()
-    departamento = None
     try:
         with conexion.cursor() as cursor:
             sql = "SELECT id, nombre, codigo_postal, disponible, fecha_creacion FROM departamento WHERE id = %s"
             cursor.execute(sql, (id,))
             resultado = cursor.fetchone()
             if resultado:
-                departamento =claseDepartamento(*resultado)
+                departamento = Departamento(*resultado)
                 logger.info(f"Departamento obtenido: {departamento}.")
+                return departamento
             else:
                 logger.warning(f"No se encontró un departamento con id {id}.")
-        return departamento
+                return None
     except mysql.connector.Error as e:
         logger.error(f"Error al obtener departamento: {e}")
         return None
@@ -70,21 +68,20 @@ def obtener_departamento_por_id(id):
             conexion.close()
 
 def actualizar_departamento(departamento):
-
     if not departamento.nombre or not departamento.nombre.strip():
         logger.warning("El nombre del departamento está vacío o es inválido.")
-        return False
+        return False #puedes dejarlo asi para tu logica
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
             sql = "UPDATE departamento SET nombre = %s, codigo_postal = %s, disponible = %s WHERE id = %s"
             cursor.execute(sql, (departamento.nombre, departamento.codigo_postal, departamento.disponible, departamento.id))
-        conexion.commit()
-        logger.info(f"Departamento con id {departamento.id} actualizado.")
-        return True
+            conexion.commit()
+            return cursor.rowcount > 0 #retorna true si se actualizo al menos una fila
     except mysql.connector.Error as e:
         logger.error(f"Error al actualizar departamento con id {departamento.id}: {e}")
-        conexion.rollback()
+        if conexion:
+            conexion.rollback()
         return False
     finally:
         if conexion:
@@ -103,12 +100,12 @@ def eliminar_departamento(id):
 
             sql = "DELETE FROM departamento WHERE id = %s"
             cursor.execute(sql, (id,))
-        conexion.commit()
-        logger.info(f"Departamento con id {id} eliminado.")
-        return True
+            conexion.commit()
+            return cursor.rowcount > 0 #retorna true si se elimino al menos una fila
     except mysql.connector.Error as e:
         logger.error(f"Error al eliminar departamento con id {id}: {e}")
-        conexion.rollback()
+        if conexion:
+            conexion.rollback()
         return False
     finally:
         if conexion:

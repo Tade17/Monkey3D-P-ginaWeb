@@ -1,61 +1,67 @@
 from bd import obtener_conexion
 from logger_config import logger
-from clases import claseDomicilio
+from clases import Domicilio
 import mysql.connector
+
 def insertar_domicilio(domicilio):
-    if not isinstance(domicilio, claseDomicilio):
+    if not isinstance(domicilio, Domicilio):
         logger.warning("Se debe proporcionar un objeto Domicilio.")
-        return False
+        return None
 
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
             sql = "INSERT INTO domicilio (predeterminado, fecha_creacion, direccion_id, usuario_id) VALUES (%s, %s, %s, %s)"
             cursor.execute(sql, (domicilio.predeterminado, domicilio.fecha_creacion, domicilio.direccion_id, domicilio.usuario_id))
-        conexion.commit()
-        domicilio.id = cursor.lastrowid
-        logger.info(f"Domicilio insertado exitosamente con ID: {domicilio.id}")
-        return True
+            conexion.commit()
+
+            domicilio_id = cursor.lastrowid
+            cursor.execute("SELECT id, predeterminado, fecha_creacion, direccion_id, usuario_id FROM domicilio WHERE id = %s", (domicilio_id,))
+            result = cursor.fetchone()
+            if result:
+                return Domicilio(*result)
+            else:
+                logger.error(f"Error al obtener el domicilio después de la inserción. ID: {domicilio_id}")
+                return None
     except mysql.connector.Error as e:
         logger.error(f"Error al insertar el domicilio: {e}")
-        conexion.rollback()
-        return False
+        if conexion:
+            conexion.rollback()
+        return None
     finally:
         if conexion:
             conexion.close()
 
 def obtener_todos_domicilios():
     conexion = obtener_conexion()
-    domicilios = []
     try:
         with conexion.cursor() as cursor:
             sql = "SELECT id, predeterminado, fecha_creacion, direccion_id, usuario_id FROM domicilio"
             cursor.execute(sql)
-            resultados = cursor.fetchall()
-            for resultado in resultados:
-                domicilio = claseDomicilio(*resultado)
-                domicilios.append(domicilio)
+            domicilios = [Domicilio(*row) for row in cursor.fetchall()]
         logger.info(f"{len(domicilios)} domicilios obtenidos.")
         return domicilios
     except mysql.connector.Error as e:
         logger.error(f"Error al obtener domicilios: {e}")
-        return []
+        return None #retorna None en caso de error
     finally:
         if conexion:
             conexion.close()
 
 def obtener_domicilio_por_id(id):
     conexion = obtener_conexion()
-    domicilio = None
     try:
         with conexion.cursor() as cursor:
             sql = "SELECT id, predeterminado, fecha_creacion, direccion_id, usuario_id FROM domicilio WHERE id = %s"
             cursor.execute(sql, (id,))
             resultado = cursor.fetchone()
             if resultado:
-                domicilio = claseDomicilio(*resultado)
+                domicilio = Domicilio(*resultado)
                 logger.info(f"Domicilio obtenido: {domicilio}.")
-        return domicilio
+                return domicilio
+            else:
+                logger.warning(f"No se encontró un domicilio con id {id}.")
+                return None
     except mysql.connector.Error as e:
         logger.error(f"Error al obtener domicilio: {e}")
         return None
@@ -64,21 +70,20 @@ def obtener_domicilio_por_id(id):
             conexion.close()
 
 def actualizar_domicilio(domicilio):
-    if not isinstance(domicilio, claseDomicilio):
+    if not isinstance(domicilio, Domicilio):
         logger.warning("Se debe proporcionar un objeto Domicilio.")
-        return False
-
+        return False #Puedes dejarlo asi para tu logica
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
             sql = "UPDATE domicilio SET predeterminado = %s, fecha_creacion = %s, direccion_id = %s, usuario_id = %s WHERE id = %s"
             cursor.execute(sql, (domicilio.predeterminado, domicilio.fecha_creacion, domicilio.direccion_id, domicilio.usuario_id, domicilio.id))
-        conexion.commit()
-        logger.info(f"Domicilio con id {domicilio.id} actualizado.")
-        return True
+            conexion.commit()
+            return cursor.rowcount > 0 #retorna true si se actualizo al menos una fila
     except mysql.connector.Error as e:
         logger.error(f"Error al actualizar domicilio con id {domicilio.id}: {e}")
-        conexion.rollback()
+        if conexion:
+            conexion.rollback()
         return False
     finally:
         if conexion:
@@ -90,12 +95,12 @@ def eliminar_domicilio(id):
         with conexion.cursor() as cursor:
             sql = "DELETE FROM domicilio WHERE id = %s"
             cursor.execute(sql, (id,))
-        conexion.commit()
-        logger.info(f"Domicilio con id {id} eliminado.")
-        return True
+            conexion.commit()
+            return cursor.rowcount > 0 #retorna true si se elimino al menos una fila
     except mysql.connector.Error as e:
         logger.error(f"Error al eliminar domicilio con id {id}: {e}")
-        conexion.rollback()
+        if conexion:
+            conexion.rollback()
         return False
     finally:
         if conexion:

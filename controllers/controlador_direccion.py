@@ -1,66 +1,71 @@
 from bd import obtener_conexion
 from logger_config import logger
-from clases import claseDireccion
+from clases import Direccion # Importa la clase correctamente
 import mysql.connector
 
 def insertar_direccion(direccion):
-    if not isinstance(direccion, claseDireccion):
+    if not isinstance(direccion, Direccion):
         logger.warning("Se debe proporcionar un objeto Direccion.")
-        return False
+        return None
 
-    if not direccion.calle or not direccion.calle.strip() or not direccion.numero_casa or not direccion.numero_casa.strip():
+    if not direccion.calle or not direccion.calle.strip() or not direccion.numero_casa or not str(direccion.numero_casa).strip(): #convierte a string por si es un int
         logger.warning("La calle y el número de casa no pueden estar vacíos.")
-        return False
-        
+        return None
+
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
             sql = "INSERT INTO direccion (calle, numero_casa, referencia, fecha_creacion, distrito_id) VALUES (%s, %s, %s, %s, %s)"
             cursor.execute(sql, (direccion.calle, direccion.numero_casa, direccion.referencia, direccion.fecha_creacion, direccion.distrito_id))
-        conexion.commit()
-        direccion.id = cursor.lastrowid
-        logger.info(f"Dirección insertada exitosamente con ID: {direccion.id}")
-        return True
+            conexion.commit()
+
+            direccion_id = cursor.lastrowid
+            cursor.execute("SELECT id, calle, numero_casa, referencia, fecha_creacion, distrito_id FROM direccion WHERE id = %s", (direccion_id,))
+            result = cursor.fetchone()
+            if result:
+                return Direccion(*result)
+            else:
+                logger.error(f"Error al obtener la dirección después de la inserción. ID: {direccion_id}")
+                return None
     except mysql.connector.Error as e:
         logger.error(f"Error al insertar la dirección: {e}")
-        conexion.rollback()
-        return False
+        if conexion:
+            conexion.rollback()
+        return None
     finally:
         if conexion:
             conexion.close()
 
 def obtener_todas_direcciones():
     conexion = obtener_conexion()
-    direcciones = []
     try:
         with conexion.cursor() as cursor:
             sql = "SELECT id, calle, numero_casa, referencia, fecha_creacion, distrito_id FROM direccion"
             cursor.execute(sql)
-            resultados = cursor.fetchall()
-            for resultado in resultados:
-                direccion = claseDireccion(*resultado)
-                direcciones.append(direccion)
+            direcciones = [Direccion(*row) for row in cursor.fetchall()]
         logger.info(f"{len(direcciones)} direcciones obtenidas.")
         return direcciones
     except mysql.connector.Error as e:
         logger.error(f"Error al obtener direcciones: {e}")
-        return []
+        return None
     finally:
         if conexion:
             conexion.close()
 
 def obtener_direccion_por_id(id):
     conexion = obtener_conexion()
-    direccion = None
     try:
         with conexion.cursor() as cursor:
             sql = "SELECT id, calle, numero_casa, referencia, fecha_creacion, distrito_id FROM direccion WHERE id = %s"
             cursor.execute(sql, (id,))
             resultado = cursor.fetchone()
             if resultado:
-                direccion = claseDireccion(*resultado)
+                direccion = Direccion(*resultado)
                 logger.info(f"Dirección obtenida: {direccion}.")
-        return direccion
+                return direccion
+            else:
+                logger.warning(f"No se encontró una dirección con id {id}.")
+                return None
     except mysql.connector.Error as e:
         logger.error(f"Error al obtener dirección: {e}")
         return None
@@ -69,10 +74,10 @@ def obtener_direccion_por_id(id):
             conexion.close()
 
 def actualizar_direccion(direccion):
-    if not isinstance(direccion, claseDireccion):
+    if not isinstance(direccion, Direccion):
         logger.warning("Se debe proporcionar un objeto Direccion.")
-        return False
-    if not direccion.calle or not direccion.calle.strip() or not direccion.numero_casa or not direccion.numero_casa.strip():
+        return False #puedes dejarlo asi para tu logica
+    if not direccion.calle or not direccion.calle.strip() or not direccion.numero_casa or not str(direccion.numero_casa).strip(): #convierte a string por si es un int
         logger.warning("La calle y el número de casa no pueden estar vacíos.")
         return False
     conexion = obtener_conexion()
@@ -80,12 +85,12 @@ def actualizar_direccion(direccion):
         with conexion.cursor() as cursor:
             sql = "UPDATE direccion SET calle = %s, numero_casa = %s, referencia = %s, fecha_creacion = %s, distrito_id = %s WHERE id = %s"
             cursor.execute(sql, (direccion.calle, direccion.numero_casa, direccion.referencia, direccion.fecha_creacion, direccion.distrito_id, direccion.id))
-        conexion.commit()
-        logger.info(f"Dirección con id {direccion.id} actualizada.")
-        return True
+            conexion.commit()
+            return cursor.rowcount > 0 #retorna true si se actualizo al menos una fila
     except mysql.connector.Error as e:
         logger.error(f"Error al actualizar dirección con id {direccion.id}: {e}")
-        conexion.rollback()
+        if conexion:
+            conexion.rollback()
         return False
     finally:
         if conexion:
@@ -97,12 +102,12 @@ def eliminar_direccion(id):
         with conexion.cursor() as cursor:
             sql = "DELETE FROM direccion WHERE id = %s"
             cursor.execute(sql, (id,))
-        conexion.commit()
-        logger.info(f"Dirección con id {id} eliminada.")
-        return True
+            conexion.commit()
+            return cursor.rowcount > 0 #retorna true si se elimino al menos una fila
     except mysql.connector.Error as e:
         logger.error(f"Error al eliminar dirección con id {id}: {e}")
-        conexion.rollback()
+        if conexion:
+            conexion.rollback()
         return False
     finally:
         if conexion:

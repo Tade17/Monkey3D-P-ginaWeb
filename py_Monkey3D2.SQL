@@ -75,7 +75,7 @@ CREATE TABLE producto (
     stock INT(10) not null,
     imagen VARCHAR(255),
     fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    estado TINYINT(1) DEFAULT 1,
+    estado enum('nuevos', 'ofertas', 'destacados') DEFAULT 'nuevos',
     categoria_id INT(10) UNSIGNED,
     FOREIGN KEY (categoria_id) REFERENCES categoria(id)
 );
@@ -231,3 +231,30 @@ INSERT INTO distrito (nombre, provincia_id, codigo_postal) VALUES
 ('Miraflores', (SELECT id FROM provincia WHERE nombre = 'Arequipa'), '040109'),
 ('Cusco', (SELECT id FROM provincia WHERE nombre = 'Cusco'), '080101'),
 ('San Sebastián', (SELECT id FROM provincia WHERE nombre = 'Cusco'), '080108');
+
+INSERT INTO `usuario`(`nombre`, `apellidos`, `email`, `contraseña`, `rol`, `foto`, `telefono`) VALUES 
+('Tadeo','Mendoza Gastulo','tadeomendozatsm@gmail.com','tadeoelpapitsm','administrador','tadeo.png','920857938');
+
+INSERT INTO `categoria`( `nombre`) VALUES 
+('Leds'),
+('Funkos'),
+('Soportes'),
+('Llaveros'),
+('Máscaras'),
+('Accesorios');
+INSERT INTO `producto`( `nombre`, `descripcion`, `precio`, `stock`, `imagen`,`estado`,`categoria_id`) VALUES 
+('Led lumninoso (YEAH)','Leds únicos basados en tus diseños o ideas.',29.99,10, 'led-yeah.jpg','ofertas',1),
+('Led luminoso(BRUTAL)','Leds únicos basados en tus diseños o ideas.',29.99,15, 'led-brutal.jpg','ofertas',1),
+('Funko personalizable (CR7)','Funkos únicos basados en tus diseños o ideas.',40.99,5, 'funko-bicho.jpg','ofertas',2),
+('Funko personalizable(WWE)','Funkos únicos basados en tus diseños o ideas.',40.99,20, 'funko-roman-reings.jpg','ofertas',2),
+('Soporte switch',' Soporte para Switch.',25.99,10, 'soporte-switch.jpg','nuevos',3),
+('Soporte mando ps5','Soporte para Switch.',25.99,10, 'soporteMando2.jpg','nuevos',3),
+('Llavero personalizado de Pokemon','Llaveros únicos basadas en tus diseños o ideas.',14.99,15, 'llavero-pokemon.jpg','nuevos',4),
+('Llavero personalizado de spiderman','Llaveros únicos basadas en tus diseños o ideas.',14.99,15, 'llavero-spiderman.jpg','nuevos',4),
+('Máscara Squid game','Máscaras personalizadas basadas en tus diseños o ideas.',34.99,12, 'mascara-casa-papel.jpg','destacados',5),
+('Soporte audfionos Darth Veader','Soportes de audífonos personalizados basadas en tus diseños o ideas.',25.99,13, 'soporte_audifonos.DARTH.jpg','destacados',3),
+('Soporte audifonos Batman','Soportes de audífonos personalizados basadas en tus diseños o ideas.',25.99,8, 'soporte_audifonos.batman.jpg','destacados',3),
+('Umbrella Squid game','Accesorio personalizados en tus diseños o ideas.',10.99,5, 'casa-papel-paraguas.jpg','destacados',6);
+
+
+

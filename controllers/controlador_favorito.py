@@ -1,107 +1,96 @@
 from bd import obtener_conexion
-from clases import claseFavorito
+from clases import Favorito
 from logger_config import logger
 import mysql.connector
-
 
 def insertar_favorito(producto_id, usuario_id):
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
-            cursor.execute(
-                """
-                INSERT INTO favorito(producto_id, usuario_id, fecha_creacion)
-                VALUES (%s, %s, NOW())
-                """,
-                (producto_id, usuario_id)
-            )
-        conexion.commit()
-        logger.info(f"Producto {producto_id} añadido a favoritos por el usuario {usuario_id}.")
-    except Exception as e:
+            sql = "INSERT INTO favorito(producto_id, usuario_id, fecha_creacion) VALUES (%s, %s, NOW())"
+            cursor.execute(sql, (producto_id, usuario_id))
+            conexion.commit()
+
+            favorito_id = cursor.lastrowid
+            cursor.execute("SELECT id, fecha_creacion, producto_id, usuario_id FROM favorito WHERE id = %s", (favorito_id,))
+            result = cursor.fetchone()
+            if result:
+                return Favorito(*result)
+            else:
+                logger.error(f"Error al obtener el favorito después de la inserción. ID: {favorito_id}")
+                return None
+
+    except mysql.connector.Error as e:
         logger.error(f"Error al insertar favorito: {e}")
-        raise
+        if conexion:
+            conexion.rollback()
+        return None
     finally:
-        conexion.close()
+        if conexion:
+            conexion.close()
 
 def obtener_favoritos_por_usuario(usuario_id):
     conexion = obtener_conexion()
-    favoritos = []
     try:
         with conexion.cursor() as cursor:
-            cursor.execute(
-                """
-                SELECT id, fecha_creacion, producto_id, usuario_id 
-                FROM favorito 
-                WHERE usuario_id = %s
-                """,
-                (usuario_id,)
-            )
-            favoritos = cursor.fetchall()
+            sql = "SELECT id, fecha_creacion, producto_id, usuario_id FROM favorito WHERE usuario_id = %s"
+            cursor.execute(sql, (usuario_id,))
+            favoritos = [Favorito(*row) for row in cursor.fetchall()] #lista de objetos
         logger.info(f"Se obtuvieron {len(favoritos)} favoritos para el usuario {usuario_id}.")
         return favoritos
-    except Exception as e:
+    except mysql.connector.Error as e:
         logger.error(f"Error al obtener favoritos del usuario {usuario_id}: {e}")
-        raise
+        return None #retorna None en caso de error
     finally:
-        conexion.close()
+        if conexion:
+            conexion.close()
 
 def verificar_favorito(producto_id, usuario_id):
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
-            cursor.execute(
-                """
-                SELECT id 
-                FROM favorito 
-                WHERE producto_id = %s AND usuario_id = %s
-                """,
-                (producto_id, usuario_id)
-            )
+            sql = "SELECT id FROM favorito WHERE producto_id = %s AND usuario_id = %s"
+            cursor.execute(sql, (producto_id, usuario_id))
             favorito = cursor.fetchone()
         logger.info(f"Verificación de favorito para producto {producto_id} y usuario {usuario_id}: {'existe' if favorito else 'no existe'}.")
         return favorito is not None
-    except Exception as e:
+    except mysql.connector.Error as e:
         logger.error(f"Error al verificar favorito: {e}")
-        raise
+        return None #retorna None en caso de error
     finally:
-        conexion.close()
-
+        if conexion:
+            conexion.close()
 
 def eliminar_favorito(id):
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
-            cursor.execute(
-                """
-                DELETE FROM favorito 
-                WHERE id = %s
-                """,
-                (id,)
-            )
-        conexion.commit()
-        logger.info(f"Favorito con id {id} eliminado.")
-    except Exception as e:
+            sql = "DELETE FROM favorito WHERE id = %s"
+            cursor.execute(sql, (id,))
+            conexion.commit()
+            return cursor.rowcount > 0 #retorna true si se elimino al menos una fila
+    except mysql.connector.Error as e:
         logger.error(f"Error al eliminar favorito con id {id}: {e}")
-        raise
+        if conexion:
+            conexion.rollback()
+        return False
     finally:
-        conexion.close()
-
+        if conexion:
+            conexion.close()
 
 def eliminar_favoritos_por_usuario(usuario_id):
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
-            cursor.execute(
-                """
-                DELETE FROM favorito 
-                WHERE usuario_id = %s
-                """,
-                (usuario_id,)
-            )
-        conexion.commit()
-        logger.info(f"Todos los favoritos del usuario {usuario_id} fueron eliminados.")
-    except Exception as e:
+            sql = "DELETE FROM favorito WHERE usuario_id = %s"
+            cursor.execute(sql, (usuario_id,))
+            conexion.commit()
+            return cursor.rowcount > 0 #retorna true si se elimino al menos una fila
+    except mysql.connector.Error as e:
         logger.error(f"Error al eliminar favoritos del usuario {usuario_id}: {e}")
-        raise
+        if conexion:
+            conexion.rollback()
+        return False
     finally:
-        conexion.close()
+        if conexion:
+            conexion.close()

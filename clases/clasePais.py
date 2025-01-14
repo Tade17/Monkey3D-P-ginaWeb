@@ -8,6 +8,8 @@ class Pais:
 
     def __repr__(self):
         return f"Pais(id={self.id}, nombre='{self.nombre}',codigo_iso='{self.codigo_iso}', disponible={self.disponible}, fecha_creacion='{self.fecha_creacion}')"
+    
+    
     def to_dict(self):
          return {
             "id": self.id,
