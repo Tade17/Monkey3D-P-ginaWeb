@@ -16,7 +16,6 @@
                     <th class="border border-gray-300 px-4 py-2 text-left">Precio</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Stock</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Imagen</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Fecha de Registro</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Estado</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Categoría</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Acciones</th>
@@ -25,21 +24,20 @@
             <tbody>
                 {% for producto in productos %}
                 <tr>
-                    <td class="border border-gray-300 px-4 py-2">{{ producto.id }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ producto.nombre }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ producto.descripcion }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ producto.precio }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ producto.stock }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto[0] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto[1] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto[2] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto[3] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto[4] }}</td>
                     <td class="border border-gray-300 px-4 py-2">
-                        {% if producto.imagen %}
+                        {% if producto[5] %}
                             <img src="/static/uploads/{{ producto.imagen }}" alt="{{ producto.nombre }}" class="w-16 h-16 object-cover">
                         {% else %}
                             Sin imagen
                         {% endif %}
                     </td>
-                    <td class="border border-gray-300 px-4 py-2">{{ producto.fecha_registro }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ producto.estado }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ producto.idCategoria }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto[6]}}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ producto[7] }}</td>
                     <td class="border border-gray-300 px-4 py-2 flex space-x-2">
                         <a href="/productos/editar/{{ producto.id }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">Editar</a>
                         <a href="/productos/eliminar/{{ producto.id }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Eliminar</a>

@@ -1,5 +1,5 @@
 from bd import obtener_conexion
-from clases import MetodoPago
+from clases import claseMetodoPago as MetodoPago
 from logger_config import logger
 import mysql.connector
 

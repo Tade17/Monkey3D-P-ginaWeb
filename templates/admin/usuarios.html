@@ -1,6 +1,6 @@
 {% extends 'admin/base.html' %}
 
-{% block title %}Usuarios{% endblock %}
+{% block title %} Usuarios {% endblock %}
 
 {% block content %}
     <h1 class="text-2xl font-bold mb-4">Lista de Usuarios</h1>
@@ -12,9 +12,9 @@
                     <th class="border border-gray-300 px-4 py-2 text-left">ID</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Nombre</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Apellidos</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Correo</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Teléfono</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Email</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Rol</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Telefono</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Activo</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Acciones</th>
                 </tr>
@@ -22,16 +22,16 @@
             <tbody>
                 {% for usuario in usuarios %}
                 <tr>
-                    <td class="border border-gray-300 px-4 py-2">{{ usuario.id }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ usuario.nombre }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ usuario.apellidos }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ usuario.correo }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ usuario.telefono }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ usuario.rol }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ usuario.activo }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ usuario[0] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ usuario[1] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ usuario[2] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ usuario[3] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ usuario[4] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ usuario[5] }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ usuario[6] }}</td>
                     <td class="border border-gray-300 px-4 py-2 flex space-x-2">
-                        <a href="/editar_usuario/{{ usuario.id }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">Editar</a>
-                        <a href="/eliminar_usuario/{{ usuario.id }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Eliminar</a>
+                        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">Editar</a>
+                        <a href="#" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Eliminar</a>
                     </td>
                 </tr>
                 {% endfor %}

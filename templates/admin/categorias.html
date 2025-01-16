@@ -3,35 +3,42 @@
 {% block title %}Categorías{% endblock %}
 
 {% block content %}
-    <h1 class="text-2xl font-bold mb-4">Lista de Categorías</h1>
-    <a href="/categorias/crear" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Crear Categoría</a>
+<h1 class="text-2xl font-bold mb-4">Lista de Categorías</h1>
+<a href="{{ url_for('admin_formulario_agregar_categoria')}}"
+    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Agregar
+    Categoría</a>
 
-    <div class="bg-white shadow-md rounded-lg p-6">
-        <table class="table-auto w-full border-collapse border border-gray-200">
-            <thead>
-                <tr class="bg-gray-100">
-                    <th class="border border-gray-300 px-4 py-2 text-left">ID</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Nombre</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Fecha de Creación</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for categoria in categorias %}
-                <tr>
-                    <td class="border border-gray-300 px-4 py-2">{{ categoria.id }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ categoria.nombre }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ categoria.fecha_creacion }}</td>
-                    <td class="border border-gray-300 px-4 py-2 flex space-x-2">
-                        <a href="/categorias/editar/{{ categoria.id }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">Editar</a>
-                        <a href="/categorias/eliminar/{{ categoria.id }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Eliminar</a>
-                    </td>
-                </tr>
-                {% endfor %}
-                {% if not categorias %}
-                    <tr><td colspan="4" class="border border-gray-300 px-4 py-2 text-center">No hay categorías registradas.</td></tr>
-                {% endif %}
-            </tbody>
-        </table>
-    </div>
+<div class="bg-white shadow-md rounded-lg p-6">
+    <table class="table-auto w-full border-collapse border border-gray-200">
+        <thead>
+            <tr class="bg-gray-100">
+                <th class="border border-gray-300 px-4 py-2 text-left">ID</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Nombre</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for categoria in categorias %}
+            <tr>
+                <td class="border border-gray-300 px-4 py-2">{{ categoria[0] }}</td>
+                <td class="border border-gray-300 px-4 py-2">{{ categoria[1] }}</td>
+                <td class="border border-gray-300 px-4 py-2 flex space-x-2">
+                    <a href="{{ url_for('admin_formulario_editar_categoria', id= categoria[0]) }}"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">Editar</a>
+                    <form action="{{ url_for('admin_eliminar_categoria') }}" method="POST">
+                        <input type="hidden" name="id" value="{{ categoria[0] }}">
+                        <button type="submit"
+                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+            {% if not categorias %}
+            <tr>
+                <td colspan="4" class="border border-gray-300 px-4 py-2 text-center">No hay categorías registradas.</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}

@@ -21,9 +21,9 @@ CREATE TABLE provincia(
     id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL UNIQUE,
     disponible TINYINT(1) DEFAULT 1,
+    codigo_postal VARCHAR(10),
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     departamento_id INT(10) UNSIGNED NOT NULL,
-    codigo_postal VARCHAR(10),
     FOREIGN KEY (departamento_id) REFERENCES departamento(id)
 );
 

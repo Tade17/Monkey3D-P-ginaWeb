@@ -1,6 +1,6 @@
 from bd import obtener_conexion
 from logger_config import logger
-from clases import Pago
+from clases import clasePago as Pago
 import mysql.connector
 
 def insertar_pago(pago):

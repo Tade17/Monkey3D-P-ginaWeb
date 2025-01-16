@@ -1,6 +1,6 @@
 from bd import obtener_conexion
 from logger_config import logger
-from clases import Distrito
+from clases import claseDistrito as Distrito
 import mysql.connector
 
 def insertar_distrito(distrito):

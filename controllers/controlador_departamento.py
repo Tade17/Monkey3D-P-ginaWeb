@@ -1,5 +1,5 @@
 from bd import obtener_conexion
-from clases import Departamento
+from clases import claseDepartamento
 from logger_config import logger
 import mysql.connector
 
@@ -18,7 +18,7 @@ def insertar_departamento(departamento):
             cursor.execute("SELECT id, nombre, codigo_postal, disponible, fecha_creacion FROM departamento WHERE id = %s", (departamento_id,))
             result = cursor.fetchone()
             if result:
-                return Departamento(*result)
+                return claseDepartamento(*result)
             else:
                 return None
     except mysql.connector.Error as e:
@@ -36,7 +36,7 @@ def obtener_todos_departamentos():
         with conexion.cursor() as cursor:
             sql = "SELECT id, nombre, codigo_postal, disponible, fecha_creacion FROM departamento"
             cursor.execute(sql)
-            departamentos = [Departamento(*row) for row in cursor.fetchall()]
+            departamentos = [claseDepartamento(*row) for row in cursor.fetchall()]
         logger.info(f"{len(departamentos)} departamentos obtenidos.")
         return departamentos
     except mysql.connector.Error as e:
@@ -54,7 +54,7 @@ def obtener_departamento_por_id(id):
             cursor.execute(sql, (id,))
             resultado = cursor.fetchone()
             if resultado:
-                departamento = Departamento(*resultado)
+                departamento = claseDepartamento(*resultado)
                 logger.info(f"Departamento obtenido: {departamento}.")
                 return departamento
             else:

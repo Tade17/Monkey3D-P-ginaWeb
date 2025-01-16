@@ -1,0 +1,181 @@
+{% extends "public/index.html" %}
+
+{% block title %} Monkey 3d {% endblock %}
+
+{%  block content %}
+
+    <!-- Hero Section Mejorada -->
+    <section class="bg-blue-100 rounded-2xl p-8 md:p-12 mb-16 relative overflow-hidden">
+        <div class="max-w-2xl relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
+                Impresión 3D que <span class="text-blue-600">transforma</span> tus ideas
+            </h1>
+            <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                Creamos tus diseños con precisión y calidad excepcional. Tecnología de última generación para dar
+                vida a tus proyectos.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="{{ url_for('catalogo') }}"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    Ver Catálogo
+                </a>
+                <a href="{{ url_for('contacto') }}"
+                    class="bg-white hover:bg-gray-50 text-blue-600 font-bold py-3 px-8 rounded-lg transition-all border-2 border-blue-600 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    Cotizar Proyecto
+                </a>
+                
+            </div>
+        </div>
+        <div class="absolute right-0 top-0 w-1/3 h-full hidden lg:block overflow-hidden">
+            <!-- Aquí puedes agregar una imagen decorativa gilaso  -->
+            <div id="carousel" class="relative h-full w-full">
+                <img src="{{ url_for('static', filename='img/BOOM.jpg') }}" alt="Imagen 1"
+                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                    data-index="0">
+                <img src="{{ url_for('static', filename='img/brutal.jpg') }}" alt="Imagen 2"
+                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0"
+                    data-index="1">
+                <img src="{{ url_for('static', filename='img/yeah.jpg') }}" alt="Imagen 3"
+                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0"
+                    data-index="2">
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Destacados -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Nuestros Servicios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+                class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:shadow-blue-300 transition-all duration-300">
+                <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                    <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-2">Diseño Personalizado</h3>
+                <p class="text-gray-600 text-center">Creamos diseños únicos adaptados a tus necesidades específicas.
+                </p>
+            </div>
+            <div
+                class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:shadow-blue-300 transition-all duration-300">
+                <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                    <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-2">Prototipado Rápido</h3>
+                <p class="text-gray-600 text-center">Desarrollamos prototipos funcionales en tiempo récord.</p>
+            </div>
+            <div
+                class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:shadow-blue-300 transition-all duration-300">
+                <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                    <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-2">Calidad Garantizada</h3>
+                <p class="text-gray-600 text-center">Utilizamos materiales premium y tecnología de última
+                    generación.</p>
+            </div>
+        </div>
+    </section>
+
+
+     
+    <!-- Seccion para productos nuevos -->
+
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Productos Nuevos</h2>
+        <div id="container-nuevos" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for producto in productosnuevos %}
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    {% if producto.imagen %}  <img src="{{ producto[5]}}" alt="{{ producto[1] }}" class="w-full h-48 object-cover mb-4 rounded-md">
+                    {% else %}
+                        <div class="w-full h-48 bg-gray-200 mb-4 rounded-md flex items-center justify-center">
+                            <span>Sin imagen</span></div>
+                    {% endif %}
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ producto[1]}}</h3>
+                    <p class="text-gray-600 mb-4">{{ producto[2]}}</p> <p class="text-gray-600 font-bold mb-4">S/{{ producto[3] }}</p>
+                    <a href="{{ url_for('producto', id=producto.id)}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver detalles</a>
+                </div>
+            {% endfor %}
+            {% if not productos %}
+                <p>No hay productos nuevos disponibles.</p>
+            {% endif %}
+        </div>
+    </section>
+
+
+    <section class="py-12 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-800 tracking-tight">¿Por qué elegirnos?</h2>
+                <p class="mt-2 text-lg text-gray-600">Descubre las ventajas que ofrecemos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg  hover:shadow-blue-400 transition-all duration-300 ">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto mb-4 bg-blue-100 rounded-full">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Rapidez</h3>
+                    <p class="text-gray-600">Entrega rápida sin comprometer la calidad. Tiempos de producción
+                        optimizados.</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg hover:shadow-blue-400 transition-all duration-300">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto mb-4 bg-blue-100 rounded-full">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Precisión</h3>
+                    <p class="text-gray-600">Alta precisión en cada impresión con tecnología de última generación y
+                        materiales premium.</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg hover:shadow-blue-400 transition-all duration-300">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto mb-4 bg-blue-100 rounded-full">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Precios Justos</h3>
+                    <p class="text-gray-600">Calidad premium a precios competitivos. Presupuestos transparentes sin
+                        costos ocultos.</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg hover:shadow-blue-400 transition-all duration-300">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto mb-4 bg-blue-100 rounded-full">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Soporte Personalizado</h3>
+                    <p class="text-gray-600">Atención dedicada durante todo el proceso, desde el diseño hasta la
+                        entrega final.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/miJS.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/productoDestacados.js') }}"></script>
+    
+{% endblock %}

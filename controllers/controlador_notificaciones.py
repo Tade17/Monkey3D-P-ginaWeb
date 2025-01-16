@@ -1,5 +1,5 @@
 from bd import obtener_conexion
-from clases import Notificaciones
+from clases import claseNotificaciones as Notificaciones
 from logger_config import logger
 import mysql.connector
 

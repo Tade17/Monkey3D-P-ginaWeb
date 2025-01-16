@@ -1,0 +1,29 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Agregar categoría{% endblock %}
+
+{% block content %}
+<div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
+  <h1 class="text-2xl font-semibold text-gray-800 mb-6">Agregar categoría</h1>
+
+  <form method="POST" action="{{ url_for('admin_guardar_categoria') }}">
+    <div class="mb-4">
+      <label for="nombre" class="block text-gray-700 font-medium mb-2">Nombre:</label>
+      <input type="text" id="nombre" name="nombre"
+        class="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+        placeholder="Nombre de la categoría">
+    </div>
+
+    <div class="flex justify-end">
+      <button type="submit"
+        class="text-blue-600 hover:text-blue-900 mr-2">
+        Guardar
+      </button>
+      <a href="{{ url_for('admin_categorias') }}"
+        class="text-red-600 hover:text-red-900">
+        Volver
+      </a>
+    </div>
+  </form>
+</div>
+{% endblock %}

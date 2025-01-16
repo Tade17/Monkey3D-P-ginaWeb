@@ -1,6 +1,6 @@
 from bd import obtener_conexion
 from logger_config import logger
-from clases import Direccion # Importa la clase correctamente
+from clases import claseDireccion as Direccion # Importa la clase correctamente
 import mysql.connector
 
 def insertar_direccion(direccion):

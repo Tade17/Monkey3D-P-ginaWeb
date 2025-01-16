@@ -1,6 +1,6 @@
 from bd import obtener_conexion
 from logger_config import logger
-from clases import Domicilio
+from clases import claseDomicilio as  Domicilio
 import mysql.connector
 
 def insertar_domicilio(domicilio):

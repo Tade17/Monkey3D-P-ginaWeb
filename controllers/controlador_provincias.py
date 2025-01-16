@@ -1,38 +1,24 @@
 from bd import obtener_conexion
 from logger_config import logger
-from clases import Provincia
+from clases import claseProvincia as Provincia
 import mysql.connector
-
-def insertar_provincia(provincia):
-    if not isinstance(provincia, Provincia):
-        logger.warning("Se debe proporcionar un objeto Provincia.")
-        return None
-
-    if not provincia.nombre or not provincia.nombre.strip():
-        logger.warning("El nombre de la provincia está vacío o es inválido.")
-        return None
+11
+def insertar_provincia(nombre,departamento_id,codigo_postal):
 
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
-            sql = "INSERT INTO provincia (nombre, disponible, fecha_creacion, departamento_id, codigo_postal) VALUES (%s, %s, %s, %s, %s)"
-            cursor.execute(sql, (provincia.nombre, provincia.disponible, provincia.fecha_creacion, provincia.departamento_id, provincia.codigo_postal))
+            sql = """
+            INSERT INTO provincia (nombre,codigo_postal,departamento_id) VALUES (%s, %s, %s)
+            """
+            cursor.execute(sql, (nombre,codigo_postal,departamento_id))
             conexion.commit()
-
-            provincia_id = cursor.lastrowid
-            cursor.execute("SELECT id, nombre, disponible, fecha_creacion, departamento_id, codigo_postal FROM provincia WHERE id = %s", (provincia_id,))
-            result = cursor.fetchone()
-            if result:
-                return Provincia(*result)
-            else:
-                logger.error(f"Error al obtener la provincia después de la inserción. ID: {provincia_id}")
-                return None
-
+        return True
     except mysql.connector.Error as e:
-        logger.error(f"Error al insertar la provincia '{provincia.nombre}': {e}")
+        logger.error(f"Error al insertar la provincia '{nombre}': {e}")
         if conexion:
             conexion.rollback()
-        return None
+        return False
     finally:
         if conexion:
             conexion.close()
@@ -41,7 +27,9 @@ def obtener_todas_provincias():
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
-            sql = "SELECT id, nombre, disponible, fecha_creacion, departamento_id, codigo_postal FROM provincia"
+            sql = """
+            SELECT id, nombre, disponible,codigo_postal,fecha_creacion, departamento_id,  FROM provincia
+            """
             cursor.execute(sql)
             provincias = [Provincia(*row) for row in cursor.fetchall()]
         logger.info(f"{len(provincias)} provincias obtenidas.")
@@ -57,16 +45,13 @@ def obtener_provincia_por_id(id):
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
-            sql = "SELECT id, nombre, disponible, fecha_creacion, departamento_id, codigo_postal FROM provincia WHERE id = %s"
+            sql = """SELECT id, nombre, disponible,codigo_postal,fecha_creacion,departamento_id
+             FROM provincia WHERE id = %s
+             """
             cursor.execute(sql, (id,))
-            resultado = cursor.fetchone()
-            if resultado:
-                provincia = Provincia(*resultado)
-                logger.info(f"Provincia obtenida: {provincia}.")
-                return provincia
-            else:
-                logger.warning(f"No se encontró una provincia con id {id}.")
-                return None
+            provincia=cursor.fetchone()
+        logger.info("Provincia obtenida")        
+        return provincia  
     except mysql.connector.Error as e:
         logger.error(f"Error al obtener provincia: {e}")
         return None
@@ -74,22 +59,16 @@ def obtener_provincia_por_id(id):
         if conexion:
             conexion.close()
 
-def actualizar_provincia(provincia):
-    if not isinstance(provincia, Provincia):
-        logger.warning("Se debe proporcionar un objeto Provincia.")
-        return False
-    if not provincia.nombre or not provincia.nombre.strip():
-        logger.warning("El nombre de la provincia está vacío o es inválido.")
-        return False
+def actualizar_provincia(id,nombre,disponible,codigo_postal):
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
             sql = "UPDATE provincia SET nombre = %s, disponible = %s, codigo_postal = %s, departamento_id = %s WHERE id = %s"
-            cursor.execute(sql, (provincia.nombre, provincia.disponible, provincia.codigo_postal, provincia.departamento_id, provincia.id))
+            cursor.execute(sql, (id,nombre,disponible,codigo_postal))
             conexion.commit()
-            return cursor.rowcount > 0 #retorna true si se actualizo al menos una fila
+            return True 
     except mysql.connector.Error as e:
-        logger.error(f"Error al actualizar provincia con id {provincia.id}: {e}")
+        logger.error(f"Error al actualizar provincia con id {id}: {e}")
         if conexion:
             conexion.rollback()
         return False
@@ -111,7 +90,8 @@ def eliminar_provincia(id):
             sql = "DELETE FROM provincia WHERE id = %s"
             cursor.execute(sql, (id,))
             conexion.commit()
-            return cursor.rowcount > 0 #retorna true si se elimino al menos una fila
+            logger.info(f"Se eliminó la provincia con id: {id}")
+            return True #retorna true si se elimino al menos una fila
     except mysql.connector.Error as e:
         logger.error(f"Error al eliminar provincia con id {id}: {e}")
         if conexion:

@@ -1,5 +1,5 @@
 from bd import obtener_conexion
-from clases import Categoria
+from clases import claseCategoría as Categoria
 from logger_config import logger
 import mysql.connector
 
@@ -14,13 +14,8 @@ def insertar_categoria(nombre):
             sql = "INSERT INTO categoria(nombre) VALUES (%s)"
             cursor.execute(sql, (nombre,))
             conexion.commit()
-            categoria_id = cursor.lastrowid #obtengo el id insertado
-            cursor.execute("SELECT id, nombre, fecha_creacion FROM categoria WHERE id = %s", (categoria_id,))
-            result = cursor.fetchone()
-            if result:
-                return Categoria(*result) #retorno el objeto categoria creado
-            else:
-                return None
+        logger.info(f"Categoria {nombre} ingresada con éxito ")
+        return True
     except mysql.connector.Error as e:
         logger.error(f"Error al insertar la categoría '{nombre}': {e}")
         if conexion:
@@ -32,11 +27,12 @@ def insertar_categoria(nombre):
 
 def obtener_todas_categorias():
     conexion = obtener_conexion()
+    categorias=[]
     try:
         with conexion.cursor() as cursor:
-            sql = "SELECT id, nombre, fecha_creacion FROM categoria"
+            sql = "SELECT id, nombre FROM categoria order by 1"
             cursor.execute(sql)
-            categorias = [Categoria(*row) for row in cursor.fetchall()] #lista de objetos categoria
+            categorias = cursor.fetchall() 
         logger.info(f"{len(categorias)} categorías obtenidas.")
         return categorias
     except mysql.connector.Error as e:
@@ -53,13 +49,7 @@ def obtener_categoria_por_id(id):
             sql = "SELECT id, nombre, fecha_creacion FROM categoria WHERE id=%s"
             cursor.execute(sql, (id,))
             resultado = cursor.fetchone()
-            if resultado:
-                categoria = Categoria(*resultado)
-                logger.info(f"Categoría obtenida: {categoria}.")
-                return categoria
-            else:
-                logger.warning(f"No se encontró una categoría con id {id}.")
-                return None
+        return resultado    
     except mysql.connector.Error as e:
         logger.error(f"Error al obtener categoria: {e}")
         return None
@@ -68,16 +58,13 @@ def obtener_categoria_por_id(id):
             conexion.close()
 
 def actualizar_categoria(id, nombre):
-    if not nombre or not nombre.strip():
-        logger.warning("El nombre de la categoría está vacío o es inválido.")
-        return False #puedes dejarlo asi si lo necesitas para tu logica
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
             sql = "UPDATE categoria SET nombre=%s WHERE id=%s"
             cursor.execute(sql, (nombre, id))
             conexion.commit()
-            return cursor.rowcount > 0  #retorna true si se actualizo al menos una fila
+        logger.info(f"Categoria con {id} actualizada")
     except mysql.connector.Error as e:
         logger.error(f"Error al actualizar categoria con id:{id}: {e}")
         if conexion:

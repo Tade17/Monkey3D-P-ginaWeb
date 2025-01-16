@@ -1,5 +1,5 @@
 from bd import obtener_conexion
-from clases import Favorito
+from clases import  claseFavorito as Favorito
 from logger_config import logger
 import mysql.connector
 

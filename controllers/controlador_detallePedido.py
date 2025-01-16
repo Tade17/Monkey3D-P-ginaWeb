@@ -1,6 +1,6 @@
 from bd import obtener_conexion
 from logger_config import logger
-from clases import Detalle_pedido  # Importa la clase correcta
+from clases import claseDetallePedido  as Detalle_pedido # Importa la clase correcta
 import mysql.connector
 
 def insertar_detalle_pedido(detalle_pedido):

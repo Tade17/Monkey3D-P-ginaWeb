@@ -1,6 +1,6 @@
 from bd import obtener_conexion
 from logger_config import logger
-from clases import Opiniones  # Importa la clase con el nombre correcto
+from clases import claseOpiniones as Opiniones  # Importa la clase con el nombre correcto
 import mysql.connector
 
 def insertar_opinion(opinion):
