@@ -5,7 +5,7 @@
 {% block content %}
   <h1 class="text-2xl font-bold mb-4">Agregar Usuario</h1>
 
-  <form method="POST" action="/templates/admin/agregar_usuario.html">
+  <form method="POST" action="{{url_for('admin_guardar_usuario')}}">
     <div class="mb-4">
       <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
       <input type="text" id="nombre" name="nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
@@ -26,7 +26,7 @@
       <label for="rol" class="block text-gray-700 text-sm font-bold mb-2">Rol:</label>
       <select id="rol" name="rol" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         <option value="admin">Administrador</option>
-        <option value="editor">Editor</option>
+        <option value="editor">cliente</option>
         </select>
     </div>
     <div class="mb-4">
@@ -37,6 +37,6 @@
       </select>
     </div>
     <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Guardar Usuario</button>
-    <a href="/templates/admin/usuarios.html" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2">Cancelar</a>
+    <a href="{{ url_for('admin_usuarios')}}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2">Cancelar</a>
   </form>
 {% endblock %}

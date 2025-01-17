@@ -3,44 +3,58 @@
 {% block title %}Editar Usuario{% endblock %}
 
 {% block content %}
-    <h1 class="text-2xl font-bold mb-4">Editar Usuario</h1>
+<h1 class="text-2xl font-bold mb-4">Editar Usuario</h1>
 
-    <form method="POST" action="/usuarios/editar/{{ usuario.id }}">
-        <div class="mb-4">
-            <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" value="{{ usuario.nombre }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-        </div>
-        <div class="mb-4">
-            <label for="apellidos" class="block text-gray-700 text-sm font-bold mb-2">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" value="{{ usuario.apellidos }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-        </div>
-        <div class="mb-4">
-            <label for="correo" class="block text-gray-700 text-sm font-bold mb-2">Correo:</label>
-            <input type="email" id="correo" name="correo" value="{{ usuario.correo }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-        </div>
-        <div class="mb-4">
-            <label for="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" value="{{ usuario.telefono }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-        </div>
-        <div class="mb-4">
-          <label for="contraseña" class="block text-gray-700 text-sm font-bold mb-2">Contraseña:</label>
-          <input type="password" id="contraseña" name="contraseña" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Dejar en blanco para no cambiar">
-        </div>
-        <div class="mb-4">
-            <label for="rol" class="block text-gray-700 text-sm font-bold mb-2">Rol:</label>
-            <select id="rol" name="rol" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                <option value="1" {% if usuario.rol == 1 %}selected{% endif %}>Administrador</option>
-                <option value="2" {% if usuario.rol == 2 %}selected{% endif %}>Cliente</option>
-            </select>
-        </div>
-        <div class="mb-4">
-            <label for="activo" class="block text-gray-700 text-sm font-bold mb-2">Activo:</label>
-            <select id="activo" name="activo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                <option value="Si" {% if usuario.activo == 'Si' %}selected{% endif %}>Sí</option>
-                <option value="No" {% if usuario.activo == 'No' %}selected{% endif %}>No</option>
-            </select>
-        </div>
-        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Guardar Cambios</button>
-        <a href="/usuarios" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2">Cancelar</a>
-    </form>
+<form method="POST" action="{{ url_for('admin_actualizar_usuario')}}">
+    <input type="hidden" name="id" value="{{ usuario.id }}">
+
+    <div class="mb-4">
+        <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="{{ usuario.nombre}}"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+    <div class="mb-4">
+        <label for="apellidos" class="block text-gray-700 text-sm font-bold mb-2">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" value="{{ usuario.apellidos }}"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+    <div class="mb-4">
+        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+        <input type="email" id="email" name="email" value="{{ usuario.email }}"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+    
+    
+    <div class="mb-4">
+        <label for="rol" class="block text-gray-700 text-sm font-bold mb-2">Rol:</label>
+        <select id="rol" name="rol"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <option value="1" {% if usuario.rol==1 %}selected{% endif %}>Administrador</option>
+            <option value="2" {% if usuario.rol==2 %}selected{% endif %}>Cliente</option>
+        </select>
+    </div>
+    <div class="mb-4">
+        <label for="foto" class="block text-gray-700 text-sm font-bold mb-2">Foto:</label>
+        <input type="text" id="foto" name="foto" value="{{ usuario.foto }}"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+    <div class="mb-4">
+        <label for="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" value="{{ usuario.telefono }}"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+
+
+    <div class="mb-4">
+        <label for="activo" class="block text-gray-700 text-sm font-bold mb-2">Activo:</label>
+        <select id="activo" name="activo"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <option value="Si" {% if usuario.activo=='Si' %}selected{% endif %}>Sí</option>
+            <option value="No" {% if usuario.activo=='No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Guardar
+        Cambios</button>
+    <a href="{{ url_for('admin_usuarios')}}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2">Cancelar</a>
+</form>
 {% endblock %}

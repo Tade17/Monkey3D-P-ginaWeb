@@ -2303,3 +2303,684 @@
 2025-01-16 12:14:39,728 - py_monkey3d - INFO - 12 productos obtenidos.
 2025-01-16 12:14:39,750 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 12:14:39] "GET /admin_productos HTTP/1.1" 200 -
 2025-01-16 12:14:39,786 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 12:14:39] "[33mGET /static/uploads/ HTTP/1.1[0m" 404 -
+2025-01-16 19:48:51,840 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-16 19:48:51,840 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-16 19:48:51,842 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 19:48:52,119 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 19:48:52,123 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 19:49:01,904 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-16 19:49:01,976 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:01] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 19:49:01,980 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:01] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 19:49:02,007 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:02] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=B9DH3uUWL4CRTf7SZtfl HTTP/1.1" 200 -
+2025-01-16 19:49:02,285 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:02] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 19:49:06,001 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-16 19:49:09,044 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-16 19:49:29,269 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-16 19:49:29,269 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-16 19:49:29,271 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 19:49:29,541 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 19:49:29,546 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 19:49:31,832 - py_monkey3d - INFO - 4 productos nuevos obtenidos.
+2025-01-16 19:49:31,836 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 19:49:31,858 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:31] "GET / HTTP/1.1" 200 -
+2025-01-16 19:49:31,882 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:31] "[33mGET /css/output.css HTTP/1.1[0m" 404 -
+2025-01-16 19:49:31,988 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:31] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:49:31,994 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:31] "[36mGET /static/js/miJS.js HTTP/1.1[0m" 304 -
+2025-01-16 19:49:32,001 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:32] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-01-16 19:49:32,008 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:32] "[36mGET /static/js/productoDestacados.js HTTP/1.1[0m" 304 -
+2025-01-16 19:49:32,009 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:32] "[36mGET /static/img/BOOM.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:49:32,017 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:32] "[36mGET /static/img/WhatsApp.webp HTTP/1.1[0m" 304 -
+2025-01-16 19:49:32,017 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:32] "[36mGET /static/css/miCSS.css HTTP/1.1[0m" 304 -
+2025-01-16 19:49:32,102 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:32] "[36mGET /static/img/yeah.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:49:32,119 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:32] "[36mGET /static/js/header.js HTTP/1.1[0m" 304 -
+2025-01-16 19:49:32,120 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:32] "[36mGET /static/img/brutal.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:49:36,021 - py_monkey3d - INFO - 4 productos nuevos obtenidos.
+2025-01-16 19:49:36,023 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 19:49:36,025 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "GET / HTTP/1.1" 200 -
+2025-01-16 19:49:36,039 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[33mGET /css/output.css HTTP/1.1[0m" 404 -
+2025-01-16 19:49:36,049 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[36mGET /static/css/miCSS.css HTTP/1.1[0m" 304 -
+2025-01-16 19:49:36,049 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:49:36,050 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[36mGET /static/img/BOOM.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:49:36,072 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[36mGET /static/js/header.js HTTP/1.1[0m" 304 -
+2025-01-16 19:49:36,072 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[36mGET /static/js/miJS.js HTTP/1.1[0m" 304 -
+2025-01-16 19:49:36,072 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[36mGET /static/img/yeah.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:49:36,072 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[36mGET /static/img/brutal.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:49:36,073 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-01-16 19:49:36,074 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[36mGET /static/js/productoDestacados.js HTTP/1.1[0m" 304 -
+2025-01-16 19:49:36,086 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:36] "[36mGET /static/img/WhatsApp.webp HTTP/1.1[0m" 304 -
+2025-01-16 19:49:39,965 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:49:39] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:19,477 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:19] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:19,556 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:19] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:20,145 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:20] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:20,170 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:20] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:20,536 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:20] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:20,561 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:20] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:20,702 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:20] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:20,727 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:20] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:20,877 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:20] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:20,897 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:20] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:21,071 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:21,094 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:21,245 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:21,267 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:21,420 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:21,445 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:21,602 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:21,627 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:21,783 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:21,808 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:21,946 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:21,972 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:21] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:22,108 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:22] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:22,132 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:22] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:22,279 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:22] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:22,302 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:22] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:22,440 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:22] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:22,464 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:22] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:22,606 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:22] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:22,629 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:22] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:22,786 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:22] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:22,809 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:22] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:23,005 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:23] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:23,036 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:23] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:34,187 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:34] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:34,215 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:34] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:34,718 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:34] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:34,744 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:34] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:34,929 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:34] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:34,954 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:34] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:35,086 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:35] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:35,108 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:35] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 19:59:35,242 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:35] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 19:59:35,263 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 19:59:35] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 20:19:26,890 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-16 20:19:26,891 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-16 20:19:26,893 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:19:27,397 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:19:27,403 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:19:28,801 - py_monkey3d - INFO - 4 productos nuevos obtenidos.
+2025-01-16 20:19:28,840 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:19:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-16 20:19:28,958 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:19:28] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 20:19:28,972 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:19:28] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 20:19:29,025 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:19:29] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=UdgjFcyntNSyFAzWmkCT HTTP/1.1" 200 -
+2025-01-16 20:19:29,198 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:19:29] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 20:26:07,228 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_usuario.py', reloading
+2025-01-16 20:26:07,298 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:26:07,796 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:26:07,800 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:26:12,985 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_usuario.py', reloading
+2025-01-16 20:26:13,049 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:26:13,496 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:26:13,504 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:26:15,613 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_usuario.py', reloading
+2025-01-16 20:26:15,689 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:26:16,189 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:26:16,193 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:26:20,360 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_usuario.py', reloading
+2025-01-16 20:26:20,491 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:33:12,465 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-16 20:33:12,466 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-16 20:33:12,467 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:33:12,909 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:33:12,913 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:33:18,653 - py_monkey3d - INFO - 4 productos nuevos obtenidos.
+2025-01-16 20:33:18,677 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-16 20:33:18,853 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:18] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 20:33:18,857 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:18] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 20:33:18,923 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:18] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=x5dfGJ40Sd9is4o1CjTM HTTP/1.1" 200 -
+2025-01-16 20:33:35,561 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_categoria.py', reloading
+2025-01-16 20:33:35,669 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:33:36,189 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:33:36,193 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:33:37,283 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_categoria.py', reloading
+2025-01-16 20:33:37,348 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:33:37,823 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:33:37,828 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:33:40,955 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_categoria.py', reloading
+2025-01-16 20:33:41,019 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:33:41,511 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:33:41,517 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:33:42,612 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_categoria.py', reloading
+2025-01-16 20:33:42,677 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:33:43,197 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:33:43,204 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:33:48,397 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_categoria.py', reloading
+2025-01-16 20:33:48,515 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:33:49,072 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:33:49,078 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:33:49,142 - py_monkey3d - INFO - 4 productos nuevos obtenidos.
+2025-01-16 20:33:49,147 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 20:33:49,184 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "GET / HTTP/1.1" 200 -
+2025-01-16 20:33:49,204 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[33mGET /css/output.css HTTP/1.1[0m" 404 -
+2025-01-16 20:33:49,415 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 20:33:49,422 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/js/miJS.js HTTP/1.1[0m" 304 -
+2025-01-16 20:33:49,429 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-01-16 20:33:49,435 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/js/productoDestacados.js HTTP/1.1[0m" 304 -
+2025-01-16 20:33:49,440 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/img/WhatsApp.webp HTTP/1.1[0m" 304 -
+2025-01-16 20:33:49,468 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/img/BOOM.jpg HTTP/1.1[0m" 304 -
+2025-01-16 20:33:49,490 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/img/yeah.jpg HTTP/1.1[0m" 304 -
+2025-01-16 20:33:49,502 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/css/miCSS.css HTTP/1.1[0m" 304 -
+2025-01-16 20:33:49,507 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/img/brutal.jpg HTTP/1.1[0m" 304 -
+2025-01-16 20:33:49,508 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/js/header.js HTTP/1.1[0m" 304 -
+2025-01-16 20:33:49,770 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:49] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 20:33:53,254 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:53] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 20:33:56,740 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 20:33:56,750 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 20:33:56] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 20:39:53,778 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 20:39:53,877 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:39:54,364 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:39:54,369 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:39:57,503 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 20:39:57,595 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:39:58,085 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:39:58,089 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:40:04,312 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 20:40:04,379 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:40:04,841 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:40:04,845 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:40:07,973 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 20:40:08,039 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:40:08,520 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:40:08,525 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:40:12,682 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 20:40:12,780 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:40:13,230 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:40:13,234 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:40:18,468 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 20:40:18,535 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 20:40:18,982 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 20:40:18,987 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 20:40:21,099 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 20:40:21,175 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:28:39,532 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-16 21:28:39,533 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-16 21:28:39,535 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:28:40,028 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:28:40,033 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:28:41,955 - py_monkey3d - INFO - 4 productos nuevos obtenidos.
+2025-01-16 21:28:41,959 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 21:28:42,006 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "GET / HTTP/1.1" 200 -
+2025-01-16 21:28:42,029 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[33mGET /css/output.css HTTP/1.1[0m" 404 -
+2025-01-16 21:28:42,216 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/img/BOOM.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,228 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/js/miJS.js HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,228 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/css/miCSS.css HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,230 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,244 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/js/productoDestacados.js HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,245 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,246 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/img/WhatsApp.webp HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,313 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/img/yeah.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,347 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/js/header.js HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,348 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/img/brutal.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,360 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/js/header.js HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,362 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,369 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/js/miJS.js HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,376 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-01-16 21:28:42,383 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:42] "[36mGET /static/js/productoDestacados.js HTTP/1.1[0m" 304 -
+2025-01-16 21:28:47,149 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:47] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 21:28:49,067 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 21:28:49,077 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:49] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 21:28:49,107 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:49] "[33mGET /static/uploads/ HTTP/1.1[0m" 404 -
+2025-01-16 21:28:51,129 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:28:51,138 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:51] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:28:54,076 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:54] "[35m[1mGET /admin_agregar_usuario HTTP/1.1[0m" 500 -
+2025-01-16 21:28:54,103 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:54] "GET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-16 21:28:54,126 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:54] "GET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-16 21:28:54,198 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:54] "GET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=console.png&s=9akpLEAyoCB8Zp2cCA99 HTTP/1.1" 200 -
+2025-01-16 21:28:54,215 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:28:54] "GET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-16 21:33:30,176 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:30] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:33:30,205 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:30] "GET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-16 21:33:30,219 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:30] "GET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-16 21:33:30,256 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:30] "GET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png&s=9akpLEAyoCB8Zp2cCA99 HTTP/1.1" 200 -
+2025-01-16 21:33:30,278 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:30] "GET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-16 21:33:37,584 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:37] "[35m[1mGET /admin_agregar_usuario HTTP/1.1[0m" 500 -
+2025-01-16 21:33:37,614 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:37] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:33:37,615 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:37] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:33:37,634 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:37] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=console.png&s=9akpLEAyoCB8Zp2cCA99 HTTP/1.1[0m" 304 -
+2025-01-16 21:33:42,031 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 21:33:42,039 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:42] "GET /admin_categorias HTTP/1.1" 200 -
+2025-01-16 21:33:43,266 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:43] "GET /admin_agregar_categoria HTTP/1.1" 200 -
+2025-01-16 21:33:48,323 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:33:48,325 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:48] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:33:49,937 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:49] "[35m[1mGET /admin_agregar_usuario HTTP/1.1[0m" 500 -
+2025-01-16 21:33:49,964 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:49] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:33:49,971 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:49] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:33:50,007 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:33:50] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=console.png&s=9akpLEAyoCB8Zp2cCA99 HTTP/1.1[0m" 304 -
+2025-01-16 21:36:51,239 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:36:51] "[35m[1mGET /admin_agregar_usuario HTTP/1.1[0m" 500 -
+2025-01-16 21:36:51,270 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:36:51] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:36:51,292 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:36:51] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:36:51,323 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:36:51] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=console.png&s=9akpLEAyoCB8Zp2cCA99 HTTP/1.1[0m" 304 -
+2025-01-16 21:38:15,998 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:38:15] "[35m[1mGET /admin_agregar_usuario HTTP/1.1[0m" 500 -
+2025-01-16 21:38:16,018 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:38:16] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:38:16,032 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:38:16] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:38:16,060 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:38:16] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=console.png&s=9akpLEAyoCB8Zp2cCA99 HTTP/1.1[0m" 304 -
+2025-01-16 21:38:16,084 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:38:16] "[36mGET /admin_agregar_usuario?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 21:38:24,878 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:38:24] "GET /admin_agregar_usuario HTTP/1.1" 200 -
+2025-01-16 21:38:24,927 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:38:24] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:38:32,172 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:38:32,185 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:38:32] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:38:32,241 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:38:32] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:38:33,224 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:38:33] "GET /admin_agregar_usuario HTTP/1.1" 200 -
+2025-01-16 21:41:21,803 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:41:21,815 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:21] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:41:21,969 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:21] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:41:22,395 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:41:22,397 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:22] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:41:22,446 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:22] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:41:22,554 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:41:22,556 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:22] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:41:22,607 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:22] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:41:37,000 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:41:37,011 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:37] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:41:37,070 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:37] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:41:38,190 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:41:38,192 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:38] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:41:38,238 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:38] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:41:38,339 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:41:38,341 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:38] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:41:38,382 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:38] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:41:38,489 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:41:38,490 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:38] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:41:38,531 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:38] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:41:55,418 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:41:55,428 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:55] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:41:55,479 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:41:55] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:42:01,843 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:42:01,850 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:01] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:42:01,894 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:01] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:42:02,385 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:42:02,387 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:02] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:42:02,431 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:02] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:42:02,574 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:42:02,576 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:02] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:42:02,617 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:02] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:42:02,720 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:42:02,722 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:02] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:42:02,768 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:02] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:42:32,373 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:32] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:32,403 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:32] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:42:32,404 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:32] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:42:32,424 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:32] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png&s=9akpLEAyoCB8Zp2cCA99 HTTP/1.1[0m" 304 -
+2025-01-16 21:42:43,726 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:43] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:43,744 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:43] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:42:43,752 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:43] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:42:43,766 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:43] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png&s=9akpLEAyoCB8Zp2cCA99 HTTP/1.1[0m" 304 -
+2025-01-16 21:42:43,795 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:43] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 21:42:44,013 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 21:42:44,089 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:42:44,578 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:42:44,582 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:42:44,684 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:44] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:44,686 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:44] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:44,687 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:44] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:44,806 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:44] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:44,813 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:44] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:42:44,814 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:44] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:42:44,827 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:44] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:42:44,828 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:44] "GET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-16 21:42:44,843 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:44] "GET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png&s=E0qKPZtw1UEpKCRCD8RM HTTP/1.1" 200 -
+2025-01-16 21:42:44,867 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:44] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 21:42:48,528 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:48] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:48,546 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:48] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:42:48,547 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:48] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:42:48,561 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:48] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png&s=E0qKPZtw1UEpKCRCD8RM HTTP/1.1[0m" 304 -
+2025-01-16 21:42:48,590 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:48] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 21:42:48,833 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 21:42:48,899 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:42:49,384 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:42:49,389 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:42:49,502 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:49,505 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:49,506 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:49,507 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:49,600 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,619 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:49,623 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,641 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,643 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,660 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "GET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png&s=Yykt6jlQ1hNlwIPJqlDD HTTP/1.1" 200 -
+2025-01-16 21:42:49,679 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,793 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:49,810 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,812 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,828 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png&s=Yykt6jlQ1hNlwIPJqlDD HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,848 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,948 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:49,975 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,977 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:42:49,996 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:49] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png&s=Yykt6jlQ1hNlwIPJqlDD HTTP/1.1[0m" 304 -
+2025-01-16 21:42:50,016 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:50] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 21:42:50,105 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:50] "[35m[1mGET /admin_editar_usuario/1 HTTP/1.1[0m" 500 -
+2025-01-16 21:42:50,126 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:50] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:42:50,132 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:50] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:42:50,153 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:50] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png&s=Yykt6jlQ1hNlwIPJqlDD HTTP/1.1[0m" 304 -
+2025-01-16 21:42:50,170 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:42:50] "[36mGET /admin_editar_usuario/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 21:43:12,092 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 21:43:12,176 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:43:12,737 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:43:12,742 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:43:21,025 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_usuario.py', reloading
+2025-01-16 21:43:21,107 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:43:21,574 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:43:21,580 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:43:23,877 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:43:23] "GET /admin_editar_usuario/1 HTTP/1.1" 200 -
+2025-01-16 21:43:24,007 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:43:24] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:44:27,441 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 21:44:27,535 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:46:45,860 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-16 21:46:45,861 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-16 21:46:45,863 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:46:46,362 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:46:46,367 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:46:46,435 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:46] "GET /admin_editar_usuario/1 HTTP/1.1" 200 -
+2025-01-16 21:46:46,772 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:46] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:46:47,822 - py_monkey3d - INFO - 4 productos nuevos obtenidos.
+2025-01-16 21:46:47,826 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 21:46:47,866 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "GET / HTTP/1.1" 200 -
+2025-01-16 21:46:47,903 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "[33mGET /css/output.css HTTP/1.1[0m" 404 -
+2025-01-16 21:46:47,913 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "[36mGET /static/css/miCSS.css HTTP/1.1[0m" 304 -
+2025-01-16 21:46:47,916 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:46:47,920 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "[36mGET /static/img/BOOM.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:46:47,991 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "[36mGET /static/img/yeah.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:46:47,992 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "[36mGET /static/img/brutal.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:46:47,994 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "[36mGET /static/js/productoDestacados.js HTTP/1.1[0m" 304 -
+2025-01-16 21:46:47,994 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "[36mGET /static/js/header.js HTTP/1.1[0m" 304 -
+2025-01-16 21:46:47,995 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-01-16 21:46:47,996 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:47] "[36mGET /static/js/miJS.js HTTP/1.1[0m" 304 -
+2025-01-16 21:46:48,015 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:48] "[36mGET /static/img/WhatsApp.webp HTTP/1.1[0m" 304 -
+2025-01-16 21:46:52,803 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:52] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 21:46:57,439 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:46:57,448 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:46:57] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:47:00,913 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:47:00] "GET /admin_editar_usuario/1 HTTP/1.1" 200 -
+2025-01-16 21:47:07,601 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:47:07] "[35m[1mPOST /admin_actualizar_usuario HTTP/1.1[0m" 500 -
+2025-01-16 21:47:07,632 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:47:07] "GET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-16 21:47:07,633 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:47:07] "GET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-16 21:47:07,699 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:47:07] "GET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=console.png&s=hYY8SGdJWx9yaB3nV5Gf HTTP/1.1" 200 -
+2025-01-16 21:47:07,713 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:47:07] "GET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-16 21:49:02,922 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:02] "[35m[1mPOST /admin_actualizar_usuario HTTP/1.1[0m" 500 -
+2025-01-16 21:49:02,933 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:02] "[36mGET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:49:02,934 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:02] "[36mGET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:49:02,945 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:02] "[36mGET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=console.png&s=hYY8SGdJWx9yaB3nV5Gf HTTP/1.1[0m" 304 -
+2025-01-16 21:49:02,955 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:02] "[36mGET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 21:49:18,583 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-16 21:49:18,584 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-16 21:49:18,585 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:49:18,861 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:49:18,864 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:49:21,717 - py_monkey3d - INFO - 4 productos nuevos obtenidos.
+2025-01-16 21:49:21,719 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 21:49:21,738 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "GET / HTTP/1.1" 200 -
+2025-01-16 21:49:21,762 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[33mGET /css/output.css HTTP/1.1[0m" 404 -
+2025-01-16 21:49:21,856 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:49:21,860 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[36mGET /static/js/miJS.js HTTP/1.1[0m" 304 -
+2025-01-16 21:49:21,863 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[36mGET /static/css/miCSS.css HTTP/1.1[0m" 304 -
+2025-01-16 21:49:21,865 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-01-16 21:49:21,868 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[36mGET /static/img/BOOM.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:49:21,870 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[36mGET /static/js/productoDestacados.js HTTP/1.1[0m" 304 -
+2025-01-16 21:49:21,871 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[36mGET /static/img/WhatsApp.webp HTTP/1.1[0m" 304 -
+2025-01-16 21:49:21,936 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[36mGET /static/js/header.js HTTP/1.1[0m" 304 -
+2025-01-16 21:49:21,963 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[36mGET /static/img/brutal.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:49:21,964 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:21] "[36mGET /static/img/yeah.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:49:25,570 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:25] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 21:49:29,617 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:49:29,624 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:29] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:49:31,840 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:31] "GET /admin_editar_usuario/1 HTTP/1.1" 200 -
+2025-01-16 21:49:37,710 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:37] "[35m[1mPOST /admin_actualizar_usuario HTTP/1.1[0m" 500 -
+2025-01-16 21:49:37,730 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:37] "[36mGET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:49:37,731 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:37] "[36mGET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:49:37,767 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:37] "GET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=console.png&s=TeoxBVBUVQYRFUQulVti HTTP/1.1" 200 -
+2025-01-16 21:49:46,650 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 21:49:46,747 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:49:47,045 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:49:47,047 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:49:49,189 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:49] "GET /admin_editar_usuario/1 HTTP/1.1" 200 -
+2025-01-16 21:49:49,244 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:49] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:49:54,429 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:54] "[35m[1mPOST /admin_actualizar_usuario HTTP/1.1[0m" 500 -
+2025-01-16 21:49:54,447 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:54] "[36mGET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 21:49:54,452 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:54] "[36mGET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 21:49:54,462 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:49:54] "GET /admin_actualizar_usuario?__debugger__=yes&cmd=resource&f=console.png&s=CHuVQ8lORj6lwlWP1B3C HTTP/1.1" 200 -
+2025-01-16 21:50:08,653 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 21:50:08,753 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:50:09,046 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:50:09,050 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:50:17,193 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 21:50:17,239 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:50:17,524 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:50:17,527 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:50:24,653 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\main.py', reloading
+2025-01-16 21:50:24,708 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:50:24,996 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:50:24,999 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:50:47,345 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_usuario.py', reloading
+2025-01-16 21:50:47,397 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:50:47,689 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:50:47,692 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:50:49,751 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_usuario.py', reloading
+2025-01-16 21:50:49,806 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:50:50,092 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:50:50,095 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:50:52,178 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_usuario.py', reloading
+2025-01-16 21:50:52,230 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:50:52,518 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:50:52,521 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:50:53,987 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:50:53] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 21:50:55,730 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:50:55] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 21:50:55,788 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:50:55] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:50:55,950 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:50:55] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 21:50:55,978 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:50:55] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:50:57,559 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:50:57,563 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:50:57] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:51:00,528 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:51:00] "GET /admin_editar_usuario/1 HTTP/1.1" 200 -
+2025-01-16 21:51:28,742 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:51:28] "GET /admin_editar_usuario/1 HTTP/1.1" 200 -
+2025-01-16 21:51:28,771 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:51:28] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:51:33,741 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:51:33] "[32mPOST /admin_actualizar_usuario HTTP/1.1[0m" 302 -
+2025-01-16 21:51:33,748 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:51:33,749 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:51:33] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:51:38,245 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:51:38] "GET /admin_editar_usuario/1 HTTP/1.1" 200 -
+2025-01-16 21:51:42,521 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:51:42] "[32mPOST /admin_actualizar_usuario HTTP/1.1[0m" 302 -
+2025-01-16 21:51:42,527 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:51:42,529 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:51:42] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:56:49,574 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-16 21:56:49,574 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-16 21:56:49,575 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 21:56:49,852 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 21:56:49,855 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 21:56:52,077 - py_monkey3d - INFO - 4 productos nuevos obtenidos.
+2025-01-16 21:56:52,082 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 21:56:52,106 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "GET / HTTP/1.1" 200 -
+2025-01-16 21:56:52,123 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[33mGET /css/output.css HTTP/1.1[0m" 404 -
+2025-01-16 21:56:52,223 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:56:52,224 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/css/miCSS.css HTTP/1.1[0m" 304 -
+2025-01-16 21:56:52,228 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/img/BOOM.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:56:52,229 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/js/miJS.js HTTP/1.1[0m" 304 -
+2025-01-16 21:56:52,230 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-01-16 21:56:52,237 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/js/productoDestacados.js HTTP/1.1[0m" 304 -
+2025-01-16 21:56:52,237 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/img/WhatsApp.webp HTTP/1.1[0m" 304 -
+2025-01-16 21:56:52,330 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/img/yeah.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:56:52,331 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/js/header.js HTTP/1.1[0m" 304 -
+2025-01-16 21:56:52,332 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/img/brutal.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:56:52,596 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:52] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:56:58,247 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:58] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 21:56:59,905 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:56:59,913 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:56:59] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:57:14,770 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:57:14,774 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:57:14] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:57:14,800 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:57:14] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:57:23,579 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:57:23] "GET /admin_editar_usuario/1 HTTP/1.1" 200 -
+2025-01-16 21:59:09,282 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:59:09,287 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:09] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:59:09,314 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:09] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:59:10,378 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:59:10,380 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:10] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:59:10,409 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:10] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:59:10,531 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:59:10,533 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:10] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:59:10,560 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:10] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:59:10,693 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:59:10,694 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:10] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:59:10,722 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:10] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:59:10,847 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:59:10,848 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:10] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:59:10,872 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:10] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:59:11,003 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:59:11,004 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:11] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:59:11,030 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:11] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 21:59:36,302 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 21:59:36,306 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:36] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 21:59:36,333 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 21:59:36] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 22:00:14,930 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 22:00:14,938 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:14] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 22:00:14,964 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:14] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 22:00:25,316 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 22:00:25,320 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:25] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 22:00:25,347 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:25] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 22:00:35,764 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 22:00:35,765 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:35] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 22:00:35,792 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:35] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 22:00:36,227 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 22:00:36,231 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:36] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 22:00:36,253 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:36] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 22:00:36,489 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 22:00:36,490 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:36] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 22:00:36,515 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:36] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 22:00:57,749 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 22:00:57,754 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:57] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 22:00:57,781 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:00:57] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 22:01:05,669 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 22:01:05,674 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:01:05] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 22:01:05,702 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:01:05] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 22:01:09,113 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:01:09] "[32mPOST /admin_eliminar_usuario HTTP/1.1[0m" 302 -
+2025-01-16 22:01:09,143 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 22:01:09,144 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 22:01:09] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 23:40:45,208 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-16 23:40:45,239 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-16 23:40:45,240 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 23:40:45,627 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 23:40:45,631 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 23:40:53,067 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:40:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-16 23:40:53,179 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:40:53] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 23:40:53,191 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:40:53] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 23:40:53,226 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:40:53] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=jF8yIXkas1JLv5IK52gn HTTP/1.1" 200 -
+2025-01-16 23:40:53,447 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:40:53] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-16 23:40:57,119 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:40:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-16 23:40:57,143 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:40:57] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-16 23:40:57,143 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:40:57] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-16 23:40:57,190 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:40:57] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=jF8yIXkas1JLv5IK52gn HTTP/1.1[0m" 304 -
+2025-01-16 23:41:13,149 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-16 23:41:13,149 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-16 23:41:13,151 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 23:41:13,661 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 23:41:13,667 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 23:41:15,449 - py_monkey3d - INFO - 4 productos nuevos obtenidos.
+2025-01-16 23:41:15,454 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 23:41:15,495 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "GET / HTTP/1.1" 200 -
+2025-01-16 23:41:15,518 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[33mGET /css/output.css HTTP/1.1[0m" 404 -
+2025-01-16 23:41:15,688 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[36mGET /static/img/BOOM.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:41:15,706 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[36mGET /static/js/miJS.js HTTP/1.1[0m" 304 -
+2025-01-16 23:41:15,706 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[36mGET /static/css/miCSS.css HTTP/1.1[0m" 304 -
+2025-01-16 23:41:15,706 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:41:15,717 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-01-16 23:41:15,719 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[36mGET /static/js/productoDestacados.js HTTP/1.1[0m" 304 -
+2025-01-16 23:41:15,721 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[36mGET /static/img/WhatsApp.webp HTTP/1.1[0m" 304 -
+2025-01-16 23:41:15,810 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[36mGET /static/img/yeah.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:41:15,819 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[36mGET /static/img/brutal.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:41:15,826 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:15] "[36mGET /static/js/header.js HTTP/1.1[0m" 304 -
+2025-01-16 23:41:27,592 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:27] "GET /dashboard HTTP/1.1" 200 -
+2025-01-16 23:41:29,827 - py_monkey3d - INFO - Usuarios obtenidos correctamente
+2025-01-16 23:41:29,842 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:29] "GET /admin_usuarios HTTP/1.1" 200 -
+2025-01-16 23:41:31,573 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:31] "GET /admin_pedidos HTTP/1.1" 200 -
+2025-01-16 23:41:34,278 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 23:41:34,293 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:34] "GET /admin_categorias HTTP/1.1" 200 -
+2025-01-16 23:41:36,272 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:41:36,284 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:36] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:41:36,323 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:36] "[33mGET /static/uploads/ HTTP/1.1[0m" 404 -
+2025-01-16 23:41:36,343 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:41:36] "[33mGET /static/uploads/ HTTP/1.1[0m" 404 -
+2025-01-16 23:49:33,440 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:33,452 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:33] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:33,491 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:33] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:33,510 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:33] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:33,546 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:33] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:34,379 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:34,381 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:34,402 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:34,419 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:34,457 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:34,560 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:34,563 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:34,586 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:34,602 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:34,628 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:34,706 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:34,708 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:34,727 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:34,749 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:34,765 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:34,875 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:34,877 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:34,897 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:34,908 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:34,929 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:34] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:35,046 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:35,048 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:35,062 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:35,078 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:35,097 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:35,160 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:35,162 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:35,182 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:35,191 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:35,210 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:35,296 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:35,298 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:35,324 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "[33mGET /static/img/producto.imagen HTTP/1.1[0m" 404 -
+2025-01-16 23:49:35,351 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:35] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:42,751 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:42,760 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:42] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:42,787 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:42] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:42,810 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:42] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:42,842 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:42] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:43,786 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:43,789 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:43] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:43,813 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:43] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:43,840 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:43] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:43,876 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:43] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:43,961 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:43,964 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:43] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:43,984 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:43] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:44,007 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:44,031 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:44,113 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:44,114 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:44,136 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:44,146 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:44,167 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:44,260 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:44,263 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:44,288 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:44,330 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:44,415 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:44,417 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:44,437 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:44,453 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:44,475 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:44] "[36mGET /static/img/logo.jpg HTTP/1.1[0m" 304 -
+2025-01-16 23:49:46,351 - py_monkey3d - INFO - 6 categorías obtenidas.
+2025-01-16 23:49:46,353 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:46] "GET /admin_categorias HTTP/1.1" 200 -
+2025-01-16 23:49:47,252 - py_monkey3d - INFO - 12 productos obtenidos.
+2025-01-16 23:49:47,254 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:47] "GET /admin_productos HTTP/1.1" 200 -
+2025-01-16 23:49:47,292 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:47] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:49:47,317 - werkzeug - INFO - 127.0.0.1 - - [16/Jan/2025 23:49:47] "[33mGET /static/img/{producto.imagen} HTTP/1.1[0m" 404 -
+2025-01-16 23:51:15,191 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_producto.py', reloading
+2025-01-16 23:51:15,288 - werkzeug - INFO -  * Restarting with stat
+2025-01-16 23:51:15,788 - werkzeug - WARNING -  * Debugger is active!
+2025-01-16 23:51:15,793 - werkzeug - INFO -  * Debugger PIN: 912-754-538
+2025-01-16 23:51:20,972 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TADEO\\Documents\\VS-proyects\\Monkey3d\\controllers\\controlador_producto.py', reloading
+2025-01-16 23:51:21,044 - werkzeug - INFO -  * Restarting with stat

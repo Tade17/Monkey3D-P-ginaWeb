@@ -138,17 +138,107 @@ def dashboard():
     return render_template('/admin/dashboard.html')
 
 
+# INICIO PARA USUARIOS
+
 @app.route('/admin_usuarios')
 def admin_usuarios():
     usuarios= controlador_usuario.obtener_todos_usuarios()
     return render_template('admin/usuarios.html',usuarios=usuarios)
 
+@app.route('/admin_agregar_usuario')
+def admin_formulario_agregar_usuario():
+    return render_template('admin/agregar_usuario.html')
 
+
+@app.route('/admin_guardar_usuario',methods=['POST'])
+def admin_guardar_usuario():
+    nombre=request.form['nombre']
+    apellidos=request.form['apellidos']
+    email=request.form['email']
+    contrasena=request.form['contraseña']
+    rol=request.form['rol']
+    foto=request.form['foto']
+    telefono=request.form['telefono']
+    controlador_usuario.insertar_usuario(nombre,apellidos,email,contrasena,rol,foto,telefono)
+    return redirect('admin_usuarios')
+
+
+@app.route('/admin_editar_usuario/<int:id>')
+def admin_formulario_editar_usuario(id):
+    usuario=controlador_usuario.obtener_usuario_por_id(id)
+    return render_template('admin/editar_usuario.html',usuario=usuario)
+
+@app.route('/admin_actualizar_usuario',methods=['POST'])
+def admin_actualizar_usuario():
+    id=request.form['id']
+    nombre=request.form['nombre']
+    apellidos=request.form['apellidos']
+    email=request.form['email']
+    rol=request.form['rol']
+    foto=request.form['foto']
+    telefono=request.form['telefono']
+    activo=request.form['activo']
+    controlador_usuario.actualizar_usuario(id,nombre,apellidos,email,rol,foto,telefono,activo)
+    flash('Usuario actualizado' , 'success')
+    return redirect('/admin_usuarios')
+
+@app.route('/admin_eliminar_usuario',methods=['POST'])
+def admin_eliminar_usuario():
+    controlador_usuario.eliminar_usuario(request.form['id'])
+    flash('Usuario eliminado' , 'success')
+    return redirect('admin_usuarios')
+# FINALIZA USUARIOS
+
+
+
+
+
+# INICIO USUARIOS
 @app.route('/admin_productos')
 def admin_productos():
     productos=controlador_producto.obtener_todos_productos()
     return render_template('admin/productos.html',productos=productos)
+@app.route('/admin_agregar_producto')
+def admin_formulario_agregar_producto():
+    return render_template('admin/agregar_producto.html')
 
+@app.route('/admin_guardar_producto')
+def admin_guardar_producto():
+    nombre=request.form['nombre']
+    descripcion=request.form['descripcion']
+    precio=request.form['precio']
+    stock=request.form['stock']
+    imagen=request.form['imagen']
+    estado=request.form['estado']
+    categoria_id=request.form['categoria_id']
+    controlador_producto.insertar_producto(nombre,descripcion,precio,stock,imagen,estado,categoria_id)
+    flash('Producto registrado','success')
+    return redirect('/admin_productos')
+
+@app.route('/admin_editar_producto')
+def admin_formulario_editar_producto():
+    return render_template('admin/editar_poducto.html')
+
+@app.route('/admin_actualizar_producto')
+def admin_actualizar_producto():
+    id=request.form['id']
+    nombre=request.form['nombre']
+    descripcion=request.form['descripcion']
+    precio=request.form['precio']
+    stock=request.form['stock']
+    imagen=request.form['imagen']
+    estado=request.form['estado']
+    categoria_id=request.form['categoria_id']
+    controlador_producto.actualizar_producto(id,nombre,descripcion,precio,stock,imagen,estado,categoria_id)
+    flash('Producto actualizado','info')
+    return redirect('admin_productos')
+
+@app.route('/admin_eliminar_producto')
+def admin_eliminar_producto():
+    controlador_producto.eliminar_producto(request.form['id'])
+    flash('Producto eliminado','success')
+    return redirect('/admin_productos')
+# FIN USUARIOS          
 
 
 # INICIA CATEGORIAS

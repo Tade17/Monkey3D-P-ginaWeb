@@ -1,6 +1,7 @@
 from bd import obtener_conexion
 from logger_config import logger
 from clases import claseUsuario 
+import pymysql.cursors
 import mysql.connector
 import bcrypt
 
@@ -9,12 +10,12 @@ def insertar_usuario(nombre,apellidos,email,contrasena,rol,foto,telefono):
     try:
         with conexion.cursor() as cursor:
             hashed_password = bcrypt.hashpw(contrasena.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
-            sql = "INSERT INTO usuario (nombre, apellidos, email, contrasena, rol, foto, telefono, activo, fecha_registro) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            sql = "INSERT INTO usuario (nombre, apellidos, email, contraseña, rol, foto, telefono, activo, fecha_registro) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
             cursor.execute(sql, (nombre, apellidos, email, hashed_password, rol, foto, telefono))
             conexion.commit()
             usuario_id = cursor.lastrowid
-            cursor.execute("SELECT id, nombre, apellidos, email, contrasena, rol, foto, telefono, activo, fecha_registro FROM usuario WHERE id = %s", (usuario_id,))
-            return f"Usuario ingresado con id:{usuario_id}"           
+        logger.info(f"Usuario ingresado con id {usuario_id}")    
+        return True           
     except mysql.connector.Error as e:
         logger.error(f"Error al insertar el usuario: {e}")
         if conexion:
@@ -28,7 +29,7 @@ def obtener_todos_usuarios():
     conexion=obtener_conexion()
     usuarios=[]
     try:
-        with conexion.cursor() as cursor:
+        with conexion.cursor(pymysql.cursors.DictCursor) as cursor:
             cursor.execute(
                 """
                 select id,nombre,apellidos,email,rol,telefono,activo
@@ -50,10 +51,10 @@ def obtener_todos_usuarios():
 def obtener_usuario_por_id(id):
     conexion=obtener_conexion()
     try:
-        with conexion.cursor() as cursor:
+        with conexion.cursor(pymysql.cursors.DictCursor) as cursor:
             cursor.execute(
             """
-            select id,nombre,apellidos,email,contrasena,rol,foto,telefono,activo,fecha_creacion
+            select id,nombre,apellidos,email,contraseña,rol,foto,telefono,activo,fecha_creacion
             from usuario 
             where id=%s
             """,(id,)
@@ -67,12 +68,12 @@ def obtener_usuario_por_id(id):
         if conexion:
             conexion.close()
 
-def actualizar_usuario(id,nombre,apellidos,email,contrasena,rol,foto,telefono,activo):
+def actualizar_usuario(id,nombre,apellidos,email,rol,foto,telefono,activo):
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
-            sql = "UPDATE usuario SET nombre = %s, apellidos = %s, email = %s, contrasena = %s, rol = %s, foto = %s, telefono = %s, activo = %s WHERE id = %s"
-            cursor.execute(sql, (id,nombre,apellidos,email,contrasena,rol,foto,telefono,activo))
+            sql = "UPDATE usuario SET nombre = %s, apellidos = %s, email = %s,  rol = %s, foto = %s, telefono = %s, activo = %s WHERE id = %s"
+            cursor.execute(sql, (id,nombre,apellidos,email,rol,foto,telefono,activo))
             conexion.commit()
             return True
     except mysql.connector.Error as e:

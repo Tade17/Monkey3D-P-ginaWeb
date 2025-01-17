@@ -1,6 +1,7 @@
 from bd import obtener_conexion
 from logger_config import logger
 from clases import  claseProducto as Producto
+import pymysql.cursors
 import mysql.connector
 
 def insertar_producto(nombre, descripcion, precio, stock, imagen, estado, categoria_id):
@@ -26,8 +27,13 @@ def obtener_todos_productos():
     conexion = obtener_conexion()
     productos=[]
     try:
-        with conexion.cursor() as cursor:
-            sql = "SELECT id, nombre, descripcion, precio, stock, imagen, estado, categoria_id FROM producto order by 1"
+        with conexion.cursor(pymysql.cursors.DictCursor) as cursor:
+            sql = """
+                SELECT p.id, p.nombre, p.descripcion, p.precio, p.stock, p.imagen, p.estado, c.nombre 
+                FROM producto p
+                inner join categoria c on c.id=p.categoria_id
+                order by p.id
+                """
             cursor.execute(sql)
             productos=cursor.fetchall()
         logger.info(f"{len(productos)} productos obtenidos.")
@@ -43,7 +49,7 @@ def obtener_productos_destacados():
     conexion = obtener_conexion()
     productos=[]
     try:
-        with conexion.cursor() as cursor:
+        with conexion.cursor(pymysql.cursors.DictCursor) as cursor:
             sql = """
                 SELECT id, nombre, descripcion, precio, stock, imagen, fecha_registro, estado, categoria_id
                 FROM producto 
@@ -64,7 +70,7 @@ def obtener_productos_nuevos():
     conexion = obtener_conexion()
     productos_nuevos=[]
     try:
-        with conexion.cursor() as cursor:
+        with conexion.cursor(pymysql.cursors.DictCursor) as cursor:
             sql = """
                 SELECT id, nombre, descripcion, precio, stock, imagen, fecha_registro, estado, categoria_id
                 FROM producto 
@@ -84,7 +90,7 @@ def obtener_productos_nuevos():
 def obtener_producto_por_id(id):
     conexion = obtener_conexion()
     try:
-        with conexion.cursor() as cursor:
+        with conexion.cursor(pymysql.cursors.DictCursor) as cursor:
             sql = "SELECT id, nombre, descripcion, precio, stock, imagen, fecha_registro, estado, categoria_id FROM producto WHERE id = %s"
             cursor.execute(sql, (id,))
             producto = cursor.fetchone()
@@ -97,12 +103,12 @@ def obtener_producto_por_id(id):
         if conexion:
             conexion.close()
 
-def actualizar_producto(nombre, descripcion, precio, stock, imagen, estado, categoria_id):
+def actualizar_producto(id,nombre, descripcion, precio, stock, imagen, estado, categoria_id):
     conexion = obtener_conexion()
     try:
         with conexion.cursor() as cursor:
             sql = "UPDATE producto SET nombre = %s, descripcion = %s, precio = %s, stock = %s, imagen = %s, estado = %s, categoria_id = %s WHERE id = %s"
-            cursor.execute(sql, (nombre, descripcion, precio, stock, imagen, estado, categoria_id))
+            cursor.execute(sql, (nombre, descripcion, precio, stock, imagen, estado, categoria_id,id))
             conexion.commit()
             return True    
     except mysql.connector.Error as e:
@@ -128,6 +134,25 @@ def eliminar_producto(id):
         if conexion:
             conexion.rollback()
         return False
+    finally:
+        if conexion:
+            conexion.close()
+
+def obtener_nombre_marca_por_id(categoria_id):
+    conexion=obtener_conexion()
+    try:
+        with conexion.cursor(pymysql.cursors.DictCursor) as cursor:
+            cursor.execute(
+            """
+             select nombre from categoria where id =%s
+            """,(categoria_id,)
+            )
+            nombre_categoria=cursor.fetchone()
+        return nombre_categoria   
+    except Exception as e:
+        logger.error("Error al encontrar el nombre de la categoria")
+        if conexion:
+            conexion.rollback()
     finally:
         if conexion:
             conexion.close()
